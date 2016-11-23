@@ -5,7 +5,7 @@ from pyhandles.control.WhiskerControl import WhiskerControl
 class WhiskerControlBuilder(ControlBuilder):
 
     def __init__(self):
-        super(ControlBuilder, self).__init__()
+        super(WhiskerControlBuilder, self).__init__()
 
         self.length = WhiskerControl.DEFAULT_LENGTH
         self.radius1 = WhiskerControl.DEFAULT_RADIUS1
