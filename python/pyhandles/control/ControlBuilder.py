@@ -5,6 +5,7 @@ class ControlBuilder(object):
 
         self.id = None
         self.parent = None
+        self.context = None
 
     def set_id(self, id):
         self.id = id
@@ -12,6 +13,10 @@ class ControlBuilder(object):
 
     def set_parent(self, parent):
         self.parent = parent
+        return self
+
+    def set_context(self, context):
+        self.context = context
         return self
 
     def build(self):
