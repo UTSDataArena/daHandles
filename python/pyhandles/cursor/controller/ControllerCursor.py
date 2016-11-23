@@ -14,12 +14,12 @@ class ControllerCursor(Cursor):
     def is_interested(event):
         return event.getServiceType() == ServiceType.Controller
 
-    def __init__(self, id, container, cursor_image_path):
+    def __init__(self, id, context, cursor_image_path):
         super(ControllerCursor, self).__init__(id)
 
-        self.container = container
+        self.context = context
 
-        self.cursor = Image.create(container)
+        self.cursor = Image.create(self.context.container)
         self.cursor.setSize(Vector2(Cursor.DEFAULT_SIZE, Cursor.DEFAULT_SIZE))
         self.cursor.setData(loadImage(cursor_image_path))
 

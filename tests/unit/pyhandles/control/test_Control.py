@@ -5,12 +5,15 @@ from pyhandles.control.Control import Control
 
 class ControlTestCase(unittest.TestCase):
 
+    class MockContext(object):
+        pass
+
     class MockParent(object):
         pass
 
     def setUp(self):
         self.parent = ControlTestCase.MockParent()
-        self.control = Control(self.parent)
+        self.control = Control(self.parent, ControlTestCase.MockContext())
 
     def testConstruct(self):
         self.assertEqual(self.parent, self.control.parent)

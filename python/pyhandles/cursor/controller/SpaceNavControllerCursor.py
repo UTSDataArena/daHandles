@@ -10,8 +10,8 @@ class SpaceNavControllerCursor(ControllerCursor):
 
     MOTION_MULTIPLIER = 3   # spacenav motion is very fine-grained
 
-    def __init__(self, id, container, cursor_image_path):
-        super(SpaceNavControllerCursor, self).__init__(id, container, cursor_image_path)
+    def __init__(self, id, context, cursor_image_path):
+        super(SpaceNavControllerCursor, self).__init__(id, context, cursor_image_path)
 
         self.display_size = getDisplayPixelSize()
 

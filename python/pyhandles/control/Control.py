@@ -6,10 +6,11 @@ class Control(Selectable):
     Base class for all control implementations.
     """
 
-    def __init__(self, parent):
+    def __init__(self, parent, context):
         super(Control, self).__init__()
 
         self.parent = parent
+        self.context = context
 
     def __eq__(self, other):
         if isinstance(other, self.__class__):

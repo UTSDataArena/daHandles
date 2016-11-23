@@ -6,6 +6,9 @@ from pyhandles.control.ControlGroup import ControlGroup
 
 class ControlGroupTestCase(unittest.TestCase):
 
+    class MockContext(object):
+        pass
+
     class MockParent(object):
         pass
 
@@ -35,7 +38,7 @@ class ControlGroupTestCase(unittest.TestCase):
 
     def setUp(self):
         self.parent = ControlGroupTestCase.MockParent()
-        self.control_group = ControlGroup(self.parent)
+        self.control_group = ControlGroup(self.parent, ControlGroupTestCase.MockContext())
 
     def testConstruct(self):
         self.assertEqual(self.parent, self.control_group.parent)
