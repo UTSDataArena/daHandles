@@ -10,6 +10,10 @@ class ControllerCursor(Cursor):
     Base class for all cursors of the controller type.
     """
 
+    @staticmethod
+    def is_interested(event):
+        return event.getServiceType() == ServiceType.Controller
+
     def __init__(self, id, container, cursor_image_path):
         super(ControllerCursor, self).__init__(id)
 
