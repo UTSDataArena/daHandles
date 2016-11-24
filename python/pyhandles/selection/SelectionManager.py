@@ -7,8 +7,8 @@ from pyhandles.cursor.pointer.PointerCursor import PointerCursor
 
 class SelectionManager(object):
 
-    def __init__(self, context):
-        self.context = context
+    def __init__(self, ui_context):
+        self.ui_context = ui_context
 
         self.nodes = []
         self.selection = []
@@ -27,7 +27,7 @@ class SelectionManager(object):
         elif ControllerCursor.is_interested(event):
 
             # todo: this will need further improvement to make sure we only respond to the cursor which owns the selection
-            for cursor in self.context.cursors:
+            for cursor in self.ui_context.cursors:
                 if isinstance(ControllerCursor, cursor) and event.isButtonDown(EventFlags.Button1):
                     self.on_click(getRayFromPoint(int(cursor.get_position().x), int(cursor.get_position().y)))
 
