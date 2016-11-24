@@ -42,24 +42,37 @@ class ScaleControlGroup(ControlGroup):
 
     def on_manipulate(self, control, origin, movement):
 
-        scale = self.parent.geo.getScale()
+        # our current strategy to ensure that controls do not get obscured by the
+        # rescaled geometry is to also adjust the scale of the control so that it
+        # remains visible - a better long term strategy would be to determine the
+        # bounds of the geometry and draw the controls on the surface of this volume
+
+        object_scale = self.parent.geo.getScale()
+        handle_scale = control.get_geo().getScale()
 
         if control == self.x_axis_control:
             if movement.x <= origin.x:
-                scale.x -= ScaleControlGroup.DELTA
+                object_scale.x -= ScaleControlGroup.DELTA
+                handle_scale.z -= ScaleControlGroup.DELTA * 0.5
             else:
-                scale.x += ScaleControlGroup.DELTA
+                object_scale.x += ScaleControlGroup.DELTA
+                handle_scale.z += ScaleControlGroup.DELTA * 0.5
 
         elif control == self.y_axis_control:
             if movement.y <= origin.y:
-                scale.y += ScaleControlGroup.DELTA
+                object_scale.y += ScaleControlGroup.DELTA
+                handle_scale.z += ScaleControlGroup.DELTA * 0.5
             else:
-                scale.y -= ScaleControlGroup.DELTA
+                object_scale.y -= ScaleControlGroup.DELTA
+                handle_scale.z -= ScaleControlGroup.DELTA * 0.5
 
         elif control == self.z_axis_control:
             if movement.x <= origin.x:
-                scale.z += ScaleControlGroup.DELTA
+                object_scale.z += ScaleControlGroup.DELTA
+                handle_scale.z += ScaleControlGroup.DELTA * 0.5
             else:
-                scale.z -= ScaleControlGroup.DELTA
+                object_scale.z -= ScaleControlGroup.DELTA
+                handle_scale.z -= ScaleControlGroup.DELTA * 0.5
 
-        self.parent.geo.setScale(scale)
+        self.parent.geo.setScale(object_scale)
+        control.get_geo().setScale(handle_scale)
