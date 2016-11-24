@@ -59,11 +59,10 @@ class WhiskerControl(Control):
                     self.on_manipulate(event.getPosition())
 
             elif ControllerCursor.is_interested(event):
+                cursor = self.ui_context.get_cursor(event)
 
-                # todo: this will need further improvement to make sure we only respond to the cursor which owns the selection
-                for cursor in self.ui_context.cursors:
-                    if isinstance(cursor, ControllerCursor) and cursor.button1Pressed:
-                        self.on_manipulate(cursor.get_position())
+                if isinstance(cursor, ControllerCursor) and cursor.button1Pressed:
+                    self.on_manipulate(cursor.get_position())
 
     def on_manipulate(self, position):
         self.parent.on_manipulate(self, self.position, position)

@@ -1,6 +1,8 @@
 from omega import *
 from omegaToolkit import *
 
+from pyhandles.cursor.pointer.MousePointerCursor import MousePointerCursor
+
 
 class UiContext(object):
 
@@ -8,6 +10,8 @@ class UiContext(object):
         super(UiContext, self).__init__()
 
         self.container = None
+
+        self.pointer = MousePointerCursor('mouse')
         self.cursors = []
 
         self.build()
@@ -15,6 +19,9 @@ class UiContext(object):
     def build(self):
         ui = UiModule.createAndInitialize()
         self.container = Container.create(ContainerLayout.LayoutFree, ui.getUi())
+
+    def get_cursor(self, event):
+        return self.cursors[event.getUserId()]
 
     def add_cursor(self, cursor):
         self.cursors.append(cursor)
