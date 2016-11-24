@@ -2,10 +2,10 @@ from omega import *
 from omegaToolkit import *
 
 
-class HandlesContext(object):
+class UiContext(object):
 
     def __init__(self):
-        super(HandlesContext, self).__init__()
+        super(UiContext, self).__init__()
 
         self.container = None
         self.cursors = []

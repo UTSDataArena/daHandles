@@ -34,4 +34,4 @@ class WhiskerControlBuilder(ControlBuilder):
         return self
 
     def build(self):
-        return WhiskerControl(self.id, self.parent, self.context, self.length, self.radius1, self.radius2, self.subdivisions, self.sides)
+        return WhiskerControl(self.id, self.parent, self.ui_context, self.length, self.radius1, self.radius2, self.subdivisions, self.sides)

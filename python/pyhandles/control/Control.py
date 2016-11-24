@@ -6,11 +6,11 @@ class Control(Selectable):
     Base class for all control implementations.
     """
 
-    def __init__(self, parent, context):
+    def __init__(self, parent, ui_context):
         super(Control, self).__init__()
 
         self.parent = parent
-        self.context = context
+        self.ui_context = ui_context
 
     def build(self):
         raise NotImplementedError

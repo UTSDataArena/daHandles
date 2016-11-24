@@ -14,4 +14,4 @@ class TranslateControlGroupBuilder(ControlBuilder):
         return self
 
     def build(self):
-        return TranslateControlGroup(self.parent, self.context, self.control_builder)
+        return TranslateControlGroup(self.parent, self.control_builder, self.ui_context)

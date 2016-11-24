@@ -15,8 +15,8 @@ class WhiskerControl(Control):
     DEFAULT_SUBDIVISIONS = 1
     DEFAULT_SIDES = 16
 
-    def __init__(self, id, parent, context, length=DEFAULT_LENGTH, radius1=DEFAULT_RADIUS1, radius2=DEFAULT_RADIUS2, subdivisions=DEFAULT_SUBDIVISIONS, sides=DEFAULT_SIDES):
-        super(WhiskerControl, self).__init__(parent, context)
+    def __init__(self, id, parent, ui_context, length=DEFAULT_LENGTH, radius1=DEFAULT_RADIUS1, radius2=DEFAULT_RADIUS2, subdivisions=DEFAULT_SUBDIVISIONS, sides=DEFAULT_SIDES):
+        super(WhiskerControl, self).__init__(parent, ui_context)
 
         self.id = id
         self.length = length
@@ -32,7 +32,6 @@ class WhiskerControl(Control):
         self.set_visible(False)
 
     def build(self):
-        # todo: this will need to be updated to support specification of a custom geometry builder?
         self.geo = CylinderShape.create(self.length, self.radius1, self.radius2, self.subdivisions, self.sides)
         self.geo.setName('%s.%s' % (self.parent.get_id(), self.id))
         self.geo.setSelectable(True)

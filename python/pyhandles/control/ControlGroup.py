@@ -3,8 +3,8 @@ from pyhandles.control.Control import Control
 
 class ControlGroup(Control):
 
-    def __init__(self, parent, context):
-        super(ControlGroup, self).__init__(parent, context)
+    def __init__(self, parent, ui_context):
+        super(ControlGroup, self).__init__(parent, ui_context)
 
         self.controls = []
 

@@ -11,14 +11,14 @@ class TranslateControlGroup(ControlGroup):
 
     DELTA = 0.1
 
-    def __init__(self, parent, context, builder):
-        super(TranslateControlGroup, self).__init__(parent, context)
+    def __init__(self, parent, builder, ui_context):
+        super(TranslateControlGroup, self).__init__(parent, ui_context)
 
         self.id = '%s.translate' % parent.get_id()
 
-        self.x_axis_control = builder.set_id('x').set_parent(self).set_context(context).build()
-        self.y_axis_control = builder.set_id('y').set_parent(self).set_context(context).build()
-        self.z_axis_control = builder.set_id('z').set_parent(self).set_context(context).build()
+        self.x_axis_control = builder.set_id('x').set_parent(self).set_ui_context(ui_context).build()
+        self.y_axis_control = builder.set_id('y').set_parent(self).set_ui_context(ui_context).build()
+        self.z_axis_control = builder.set_id('z').set_parent(self).set_ui_context(ui_context).build()
 
         self.build()
         self.set_visible(False)

@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="606f6d93-40aa-4508-b763-c0ac87a16520" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+    <list default="true" id="606f6d93-40aa-4508-b763-c0ac87a16520" name="Default" comment="Rename ui context">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/python/pyhandles/context/HandlesContext.py" afterPath="$PROJECT_DIR$/python/pyhandles/context/UiContext.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/unit/pyhandles/context/test_HandlesContext.py" afterPath="$PROJECT_DIR$/tests/unit/pyhandles/context/test_UiContext.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/pyhandles/control/Control.py" afterPath="$PROJECT_DIR$/python/pyhandles/control/Control.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/pyhandles/control/ControlBuilder.py" afterPath="$PROJECT_DIR$/python/pyhandles/control/ControlBuilder.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/pyhandles/control/ControlGroup.py" afterPath="$PROJECT_DIR$/python/pyhandles/control/ControlGroup.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/pyhandles/control/TranslateControlGroup.py" afterPath="$PROJECT_DIR$/python/pyhandles/control/TranslateControlGroup.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/pyhandles/control/TranslateControlGroupBuilder.py" afterPath="$PROJECT_DIR$/python/pyhandles/control/TranslateControlGroupBuilder.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/pyhandles/control/WhiskerControl.py" afterPath="$PROJECT_DIR$/python/pyhandles/control/WhiskerControl.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/pyhandles/control/WhiskerControlBuilder.py" afterPath="$PROJECT_DIR$/python/pyhandles/control/WhiskerControlBuilder.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/pyhandles/cursor/controller/ControllerCursor.py" afterPath="$PROJECT_DIR$/python/pyhandles/cursor/controller/ControllerCursor.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/pyhandles/cursor/controller/SpaceNavControllerCursor.py" afterPath="$PROJECT_DIR$/python/pyhandles/cursor/controller/SpaceNavControllerCursor.py" />
     </list>
     <ignored path="pyhandles.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,14 +33,14 @@
     <favorites_list name="pyhandles" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.46201938">
+    <splitter split-orientation="horizontal" split-proportion="0.27446076">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
           <file leaf-file-name="manipulator.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/../playpen/omegalib/manipulator/manipulator.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="7188">
-                  <caret line="272" column="0" selection-start-line="272" selection-start-column="0" selection-end-line="272" selection-end-column="0" />
+                <state relative-caret-position="434">
+                  <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
                   <folding>
                     <element signature="e#0#11#0" expanded="true" />
                   </folding>
@@ -38,38 +48,24 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="test_Control.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tests/unit/pyhandles/control/test_Control.py">
+          <file leaf-file-name="SelectionManager.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/python/pyhandles/selection/SelectionManager.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="465">
-                  <caret line="15" column="73" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
+                <state relative-caret-position="1798">
+                  <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
                   <folding>
-                    <element signature="e#0#15#0" expanded="true" />
+                    <element signature="e#0#19#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tests/test.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="372">
-                  <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#0#10#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="test_ControlBuilder.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/tests/unit/pyhandles/control/test_ControlBuilder.py">
+          <file leaf-file-name="ControllableSceneNode.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/python/pyhandles/selection/ControllableSceneNode.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="527">
-                  <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#0#15#0" expanded="true" />
-                  </folding>
+                  <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -78,34 +74,102 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
+          <file leaf-file-name="WhiskerControl.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/python/pyhandles/control/WhiskerControl.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="558">
+                  <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+                  <folding>
+                    <element signature="e#0#19#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="UiContext.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/python/pyhandles/context/UiContext.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="186">
+                  <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+                  <folding>
+                    <element signature="e#0#19#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Control.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/python/pyhandles/control/Control.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="372">
+                  <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="ControlGroup.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/python/pyhandles/control/ControlGroup.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="93">
-                  <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+                <state relative-caret-position="434">
+                  <caret line="14" column="58" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="58" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ControlBuilder.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="ControlBuilder.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/python/pyhandles/control/ControlBuilder.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="558">
-                  <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+                <state relative-caret-position="372">
+                  <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="test_Cursor.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tests/unit/pyhandles/cursor/test_Cursor.py">
+          <file leaf-file-name="TranslateControlGroup.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/python/pyhandles/control/TranslateControlGroup.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="279">
-                  <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+                <state relative-caret-position="558">
+                  <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
                   <folding>
-                    <element signature="e#0#15#0" expanded="true" />
+                    <element signature="e#0#11#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="TranslateControlGroupBuilder.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/python/pyhandles/control/TranslateControlGroupBuilder.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="496">
+                  <caret line="16" column="87" selection-start-line="16" selection-start-column="87" selection-end-line="16" selection-end-column="87" />
+                  <folding>
+                    <element signature="e#0#59#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="WhiskerControlBuilder.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/python/pyhandles/control/WhiskerControlBuilder.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="837">
+                  <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
+                  <folding>
+                    <element signature="e#0#59#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="test_UiContext.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/tests/unit/pyhandles/context/test_UiContext.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="93">
+                  <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -137,20 +201,11 @@
         <option value="$PROJECT_DIR$/python/pyhandles/cursor/MousePointerCursor.py" />
         <option value="$PROJECT_DIR$/python/pyhandles/cursor/pointer/MousePointerCursor.py" />
         <option value="$PROJECT_DIR$/tests/unit/pyhandles/cursor/pointer/test_MonitorPointerCursor.py" />
-        <option value="$PROJECT_DIR$/python/pyhandles/selection/Selectable.py" />
         <option value="$PROJECT_DIR$/tests/unit/pyhandles/cursor/test_Cursor.py" />
         <option value="$PROJECT_DIR$/tests/unit/pyhandles/selection/test_Selectable.py" />
         <option value="$PROJECT_DIR$/python/pyhandles/cursor/pointer/PointerCursor.py" />
-        <option value="$PROJECT_DIR$/python/pyhandles/control/ControlBuilder.py" />
-        <option value="$PROJECT_DIR$/python/pyhandles/control/WhiskerControlBuilder.py" />
-        <option value="$PROJECT_DIR$/python/pyhandles/control/WhiskerControl.py" />
         <option value="$PROJECT_DIR$/python/pyhandles/HandlesContext.py" />
-        <option value="$PROJECT_DIR$/python/pyhandles/cursor/controller/ControllerCursor.py" />
-        <option value="$PROJECT_DIR$/python/pyhandles/cursor/controller/SpaceNavControllerCursor.py" />
         <option value="$PROJECT_DIR$/python/pyhandles/context/HandlesContext.py" />
-        <option value="$PROJECT_DIR$/python/pyhandles/control/Control.py" />
-        <option value="$PROJECT_DIR$/python/pyhandles/control/ControlGroup.py" />
-        <option value="$PROJECT_DIR$/../playpen/omegalib/manipulator/manipulator.py" />
         <option value="$PROJECT_DIR$/tests/unit/pyhandles/control/test_ControlGroup.py" />
         <option value="$PROJECT_DIR$/tests/unit/pyhandles/control/test_Control.py" />
         <option value="$PROJECT_DIR$/tests/unit/pyhandles/context.py" />
@@ -160,6 +215,30 @@
         <option value="$PROJECT_DIR$/tests/unit/pyhandles/cursor/pointer/test_PointerCursor.py" />
         <option value="$PROJECT_DIR$/tests/unit/pyhandles/cursor/pointer/test_MousePointerCursor.py" />
         <option value="$PROJECT_DIR$/tests/unit/pyhandles/control/test_ControlBuilder.py" />
+        <option value="$PROJECT_DIR$/tests/unit/pyhandles/control/test_WhiskerControl.py" />
+        <option value="$PROJECT_DIR$/tests/unit/pyhandles/control/test_WhiskerControlBuilder.py" />
+        <option value="$PROJECT_DIR$/python/pyhandles/control/TranslatorControlGroup.py" />
+        <option value="$PROJECT_DIR$/tests/unit/pyhandles/control/test_TranslateControlGroup.py" />
+        <option value="$PROJECT_DIR$/tests/unit/pyhandles/control/test_TranslateControlGroupBuilder.py" />
+        <option value="$PROJECT_DIR$/python/pyhandles/selection/Selectable.py" />
+        <option value="$PROJECT_DIR$/python/pyhandles/selection/SelectableSceneNode.py" />
+        <option value="$PROJECT_DIR$/tests/unit/pyhandles/selection/test_SelectableSceneNode.py" />
+        <option value="$PROJECT_DIR$/python/pyhandles/selection/ControllableSceneNode.py" />
+        <option value="$PROJECT_DIR$/tests/unit/pyhandles/selection/test_ControllableSceneNode.py" />
+        <option value="$PROJECT_DIR$/python/pyhandles/selection/SelectionManager.py" />
+        <option value="$PROJECT_DIR$/tests/unit/pyhandles/selection/test_SelectionManager.py" />
+        <option value="$PROJECT_DIR$/python/pyhandles/context/UiContext.py" />
+        <option value="$PROJECT_DIR$/python/pyhandles/control/Control.py" />
+        <option value="$PROJECT_DIR$/python/pyhandles/control/ControlGroup.py" />
+        <option value="$PROJECT_DIR$/python/pyhandles/control/ControlBuilder.py" />
+        <option value="$PROJECT_DIR$/python/pyhandles/control/WhiskerControlBuilder.py" />
+        <option value="$PROJECT_DIR$/python/pyhandles/cursor/controller/ControllerCursor.py" />
+        <option value="$PROJECT_DIR$/python/pyhandles/cursor/controller/SpaceNavControllerCursor.py" />
+        <option value="$PROJECT_DIR$/../playpen/omegalib/manipulator/manipulator.py" />
+        <option value="$PROJECT_DIR$/python/pyhandles/control/TranslateControlGroup.py" />
+        <option value="$PROJECT_DIR$/python/pyhandles/control/TranslateControlGroupBuilder.py" />
+        <option value="$PROJECT_DIR$/python/pyhandles/control/WhiskerControl.py" />
+        <option value="$PROJECT_DIR$/tests/unit/pyhandles/context/test_UiContext.py" />
       </list>
     </option>
   </component>
@@ -305,93 +384,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="cursor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pyhandles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pyhandles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="unit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pyhandles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cursor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pointer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pyhandles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pyhandles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="unit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pyhandles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cursor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pyhandles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pyhandles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="unit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pyhandles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="control" />
+              <option name="myItemId" value="selection" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -436,6 +429,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="pyhandles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pyhandles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pyhandles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pyhandles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="selection" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -827,7 +842,70 @@
       <option name="project" value="LOCAL" />
       <updated>1479941016461</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Update project configuration.">
+      <created>1479941035313</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1479941035313</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Add setter for context property to base control builder.">
+      <created>1479943839849</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1479943839849</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Initial implementation of a simple 'whisker' control and associated builder.">
+      <created>1479943882023</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1479943882023</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Look up the correct super class when constructor chaining.">
+      <created>1479945584411</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1479945584411</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Initial implementation of a simple 'translate' control group and associated builder.">
+      <created>1479945849089</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1479945849089</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Move equals operator up into the selectable object base class.">
+      <created>1479946577693</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1479946577693</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Initial implementation of a selectable scene node.">
+      <created>1479946599485</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1479946599485</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Initial implementation of a controllable scene node.">
+      <created>1479952260430</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1479952260430</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Initial implementation of a selection manager.">
+      <created>1479953161042</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1479953161042</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -837,11 +915,12 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16014703" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33056134" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21829522" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2993763" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26039502" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23908524" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39968815" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -849,7 +928,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -876,7 +954,16 @@
     <MESSAGE value="Implement skeleton test suite for handles context." />
     <MESSAGE value="Update unit test comments." />
     <MESSAGE value="Implement control builder base class." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement control builder base class." />
+    <MESSAGE value="Update project configuration." />
+    <MESSAGE value="Add setter for context property to base control builder." />
+    <MESSAGE value="Initial implementation of a simple 'whisker' control and associated builder." />
+    <MESSAGE value="Look up the correct super class when constructor chaining." />
+    <MESSAGE value="Initial implementation of a simple 'translate' control group and associated builder." />
+    <MESSAGE value="Move equals operator up into the selectable object base class." />
+    <MESSAGE value="Initial implementation of a selectable scene node." />
+    <MESSAGE value="Initial implementation of a controllable scene node." />
+    <MESSAGE value="Initial implementation of a selection manager." />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial implementation of a selection manager." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -900,7 +987,7 @@
         <state relative-caret-position="186">
           <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -987,24 +1074,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/pyhandles/cursor/pointer/MousePointerCursor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="30" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/unit/pyhandles/selection/test_Selectable.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="868">
@@ -1015,18 +1084,186 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/pyhandles/control/WhiskerControlBuilder.py">
+    <entry file="file://$PROJECT_DIR$/tests/unit/pyhandles/context.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/pyhandles/control/WhiskerControl.py">
+    <entry file="file://$PROJECT_DIR$/tests/unit/pyhandles/cursor/controller/test_SpaceNavControllerCursor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="888">
-          <caret line="51" column="26" selection-start-line="51" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+        <state relative-caret-position="124">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/unit/pyhandles/control/test_ControlGroup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="868">
+          <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#15#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/unit/pyhandles/cursor/pointer/test_MousePointerCursor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/unit/pyhandles/cursor/pointer/test_PointerCursor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="4" column="84" selection-start-line="4" selection-start-column="84" selection-end-line="4" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/unit/pyhandles/cursor/controller/test_ControllerCursor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="4" column="84" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/unit/pyhandles/control/test_Control.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="15" column="73" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
+          <folding>
+            <element signature="e#0#15#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/unit/pyhandles/control/test_WhiskerControlBuilder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/unit/pyhandles/control/test_TranslateControlGroup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="5" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/unit/pyhandles/control/test_TranslateControlGroupBuilder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="3" column="62" selection-start-line="3" selection-start-column="62" selection-end-line="3" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/unit/pyhandles/control/test_ControlBuilder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#15#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/unit/pyhandles/selection/test_SelectableSceneNode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="5" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/unit/pyhandles/selection/test_SelectionManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/pyhandles/selection/SelectionManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1798">
+          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/unit/pyhandles/selection/test_ControllableSceneNode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/pyhandles/selection/SelectableSceneNode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#19#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/unit/pyhandles/control/test_WhiskerControl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/unit/pyhandles/cursor/test_Cursor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/pyhandles/context/UiContext.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/pyhandles/selection/Selectable.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="837">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1041,172 +1278,124 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/python/pyhandles/cursor/pointer/PointerCursor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
+        <state relative-caret-position="341">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#29#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/pyhandles/control/Control.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <marker date="1479879154279" expanded="true" signature="82:948" placeholder="..." />
-            <marker date="1479879154279" expanded="true" signature="188:289" placeholder="..." />
-            <marker date="1479879154279" expanded="true" signature="734:780" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/pyhandles/cursor/controller/ControllerCursor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/unit/pyhandles/context.py">
+    <entry file="file://$PROJECT_DIR$/python/pyhandles/cursor/pointer/MousePointerCursor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/pyhandles/context/HandlesContext.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="10" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/unit/pyhandles/context/test_HandlesContext.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/unit/pyhandles/cursor/controller/test_SpaceNavControllerCursor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/unit/pyhandles/cursor/controller/test_ControllerCursor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="4" column="84" selection-start-line="4" selection-start-column="84" selection-end-line="4" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/unit/pyhandles/control/test_Control.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="15" column="73" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/unit/pyhandles/control/test_ControlGroup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="868">
-          <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/unit/pyhandles/cursor/pointer/test_MousePointerCursor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/pyhandles/selection/Selectable.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/unit/pyhandles/cursor/pointer/test_PointerCursor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="4" column="84" selection-start-line="4" selection-start-column="84" selection-end-line="4" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/pyhandles/cursor/controller/SpaceNavControllerCursor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/pyhandles/control/ControlGroup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+          <caret line="0" column="30" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../playpen/omegalib/manipulator/manipulator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7188">
-          <caret line="272" column="0" selection-start-line="272" selection-start-column="0" selection-end-line="272" selection-end-column="0" />
+        <state relative-caret-position="434">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/unit/pyhandles/cursor/test_Cursor.py">
+    <entry file="file://$PROJECT_DIR$/python/pyhandles/cursor/controller/ControllerCursor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="374">
+          <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#20#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/unit/pyhandles/control/test_ControlBuilder.py">
+    <entry file="file://$PROJECT_DIR$/python/pyhandles/cursor/controller/SpaceNavControllerCursor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1271">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/pyhandles/selection/ControllableSceneNode.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/pyhandles/control/Control.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/pyhandles/control/ControlGroup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="14" column="58" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="58" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/python/pyhandles/control/ControlBuilder.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/pyhandles/control/TranslateControlGroupBuilder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="16" column="87" selection-start-line="16" selection-start-column="87" selection-end-line="16" selection-end-column="87" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/pyhandles/control/TranslateControlGroup.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="558">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/pyhandles/control/WhiskerControl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/pyhandles/control/WhiskerControlBuilder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="837">
+          <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/unit/pyhandles/context/test_UiContext.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
           <folding />
         </state>
       </provider>
