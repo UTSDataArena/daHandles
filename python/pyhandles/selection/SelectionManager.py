@@ -28,7 +28,7 @@ class SelectionManager(object):
 
             # todo: this will need further improvement to make sure we only respond to the cursor which owns the selection
             for cursor in self.ui_context.cursors:
-                if isinstance(ControllerCursor, cursor) and event.isButtonDown(EventFlags.Button1):
+                if isinstance(cursor, ControllerCursor) and event.isButtonDown(EventFlags.Button1):
                     self.on_click(getRayFromPoint(int(cursor.get_position().x), int(cursor.get_position().y)))
 
     def on_click(self, ray):

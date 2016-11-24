@@ -33,12 +33,13 @@ class ControllerCursor(Cursor):
 
         event = getEvent()
 
-        if event.getServiceType() == ServiceType.Controller:
+        if ControllerCursor.is_interested(event):
+
             if event.getType() == EventType.Up:
                 self.on_button_up(event)
             elif event.getType() == EventType.Down:
                 self.on_button_down(event)
-            elif event.getType() == EventType.Move:
+            elif event.getType() == EventType.Update:
                 self.on_move(event)
 
     def on_move(self, event):
