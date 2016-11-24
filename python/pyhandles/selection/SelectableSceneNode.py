@@ -19,5 +19,8 @@ class SelectableSceneNode(Selectable):
     def get_id(self):
         return self.node.getName()
 
+    def get_geo(self):
+        return self.geo
+
     def match(self, candidate):
         return [self] if self.geo.getName() == candidate.getName() else []

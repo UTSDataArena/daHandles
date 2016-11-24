@@ -47,8 +47,8 @@ class ScaleControlGroup(ControlGroup):
         # remains visible - a better long term strategy would be to determine the
         # bounds of the geometry and draw the controls on the surface of this volume
 
-        object_scale = self.parent.geo.getScale()
         handle_scale = control.get_geo().getScale()
+        object_scale = self.parent.get_geo().getScale()
 
         if control == self.x_axis_control:
             if movement.x <= origin.x:
@@ -74,5 +74,5 @@ class ScaleControlGroup(ControlGroup):
                 object_scale.z -= ScaleControlGroup.DELTA
                 handle_scale.z -= ScaleControlGroup.DELTA * 0.5
 
-        self.parent.geo.setScale(object_scale)
         control.get_geo().setScale(handle_scale)
+        self.parent.get_geo().setScale(object_scale)
