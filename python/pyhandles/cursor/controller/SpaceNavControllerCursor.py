@@ -13,8 +13,6 @@ class SpaceNavControllerCursor(ControllerCursor):
     def __init__(self, id, cursor_image_path, ui_context):
         super(SpaceNavControllerCursor, self).__init__(id, cursor_image_path, ui_context)
 
-        self.display_size = getDisplayPixelSize()
-
         self.button1Pressed = False
         self.button2Pressed = False
 
@@ -30,11 +28,8 @@ class SpaceNavControllerCursor(ControllerCursor):
 
             position = Vector2(self.cursor.getPosition().x, self.cursor.getPosition().y)
 
-            if 0 <= x < self.display_size[0]:
-                position.x = x
-
-            if 0 <= y < self.display_size[1]:
-                position.y = y
+            position.x = x
+            position.y = y
 
             self.set_position(position)
 
