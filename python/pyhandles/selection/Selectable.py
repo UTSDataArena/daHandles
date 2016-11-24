@@ -8,6 +8,12 @@ class Selectable(object):
 
         self.is_selected = False
 
+    def __eq__(self, other):
+        if isinstance(other, self.__class__):
+            return self.get_id() == other.get_id()
+        else:
+            return False
+
     def get_id(self):
         raise NotImplementedError
 

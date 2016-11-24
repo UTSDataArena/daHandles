@@ -12,12 +12,6 @@ class Control(Selectable):
         self.parent = parent
         self.context = context
 
-    def __eq__(self, other):
-        if isinstance(other, self.__class__):
-            return self.get_id() == other.get_id()
-        else:
-            return False
-
     def build(self):
         raise NotImplementedError
 
