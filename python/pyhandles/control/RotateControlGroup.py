@@ -1,69 +1,55 @@
 import math
 
-from cyclops import *
 from euclid import *
 from omega import *
 
-from pyhandles.control.ControlGroup import ControlGroup
+from pyhandles.control.TriAxisControlGroup import TriAxisControlGroup
 
 
-class RotateControlGroup(ControlGroup):
+class Rotation(object):
 
-    DELTA = 0.5
+    INCREMENT = 1.0
+
+    @staticmethod
+    def rotate(axis, origin, delta):
+
+        rotation = 0
+        rotation_axis = None
+
+        if axis == TriAxisControlGroup.X_AXIS:
+            rotation_axis = Vector3(1, 0, 0)
+            if delta.y <= origin.y:
+                rotation += Rotation.INCREMENT
+            else:
+                rotation -= Rotation.INCREMENT
+
+        elif axis == TriAxisControlGroup.Y_AXIS:
+            rotation_axis = Vector3(0, 1, 0)
+            if delta.x <= origin.x:
+                rotation -= Rotation.INCREMENT
+            else:
+                rotation += Rotation.INCREMENT
+
+        elif axis == TriAxisControlGroup.Z_AXIS:
+            rotation_axis = Vector3(0, 0, 1)
+            if delta.y <= origin.y:
+                rotation += Rotation.INCREMENT
+            else:
+                rotation -= Rotation.INCREMENT
+
+        return rotation_axis, math.radians(rotation)
+
+
+class RotateControlGroup(TriAxisControlGroup):
 
     def __init__(self, parent, builder, ui_context):
-        super(RotateControlGroup, self).__init__(parent, ui_context)
+        super(RotateControlGroup, self).__init__(parent, builder, ui_context)
 
         self.id = '%s.rotate' % parent.get_id()
-
-        self.x_axis_control = builder.set_id('x').set_parent(self).set_ui_context(ui_context).build()
-        self.y_axis_control = builder.set_id('y').set_parent(self).set_ui_context(ui_context).build()
-        self.z_axis_control = builder.set_id('z').set_parent(self).set_ui_context(ui_context).build()
 
         self.build()
         self.set_visible(False)
 
-    def build(self):
-
-        self.x_axis_control.set_effect('colored -d red')
-        self.x_axis_control.geo.rotate(Vector3(0, 1, 0), math.radians(90), Space.Parent)
-
-        self.y_axis_control.set_effect('colored -d green')
-        self.y_axis_control.geo.rotate(Vector3(1, 0, 0), math.radians(-90), Space.Parent)
-
-        self.z_axis_control.set_effect('colored -d blue')
-
-        for control in [self.x_axis_control, self.y_axis_control, self.z_axis_control]:
-            self.controls.append(control)
-            setEventFunction(control.on_event)
-
-    def get_id(self):
-        return self.id
-
     def on_manipulate(self, control, origin, movement):
-
-        axis = None
-        rotation = 0
-
-        if control == self.x_axis_control:
-            axis = Vector3(1, 0, 0)
-            if movement.x <= origin.x:
-                rotation += RotateControlGroup.DELTA
-            else:
-                rotation -= RotateControlGroup.DELTA
-
-        elif control == self.y_axis_control:
-            axis = Vector3(0, 1, 0)
-            if movement.x <= origin.x:
-                rotation -= RotateControlGroup.DELTA
-            else:
-                rotation += RotateControlGroup.DELTA
-
-        elif control == self.z_axis_control:
-            axis = Vector3(0, 0, 1)
-            if movement.x <= origin.x:
-                rotation += RotateControlGroup.DELTA
-            else:
-                rotation -= RotateControlGroup.DELTA
-
-        self.parent.node.rotate(axis, math.radians(rotation), Space.Local)
+        axis, angle = Rotation.rotate(self.get_control_axis(control), origin, movement)
+        self.parent.node.rotate(axis, angle, Space.Local)

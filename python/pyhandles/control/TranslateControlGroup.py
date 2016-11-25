@@ -1,65 +1,48 @@
-import math
-
-from cyclops import *
 from euclid import *
 from omega import *
 
-from pyhandles.control.ControlGroup import ControlGroup
+from pyhandles.control.TriAxisControlGroup import TriAxisControlGroup
 
 
-class TranslateControlGroup(ControlGroup):
+class Translation(object):
 
-    DELTA = 0.1
+    INCREMENT = 0.1
+
+    @staticmethod
+    def translate(axis, origin, delta):
+
+        translation = Vector3(0, 0, 0)
+
+        if axis == TriAxisControlGroup.X_AXIS:
+            if delta.x <= origin.x:
+                translation.x -= Translation.INCREMENT
+            else:
+                translation.x += Translation.INCREMENT
+
+        elif axis == TriAxisControlGroup.Y_AXIS:
+            if delta.y <= origin.y:
+                translation.y += Translation.INCREMENT
+            else:
+                translation.y -= Translation.INCREMENT
+
+        elif axis == TriAxisControlGroup.Z_AXIS:
+            if delta.x <= origin.x:
+                translation.z += Translation.INCREMENT
+            else:
+                translation.z -= Translation.INCREMENT
+
+        return translation
+
+
+class TranslateControlGroup(TriAxisControlGroup):
 
     def __init__(self, parent, builder, ui_context):
-        super(TranslateControlGroup, self).__init__(parent, ui_context)
+        super(TranslateControlGroup, self).__init__(parent, builder, ui_context)
 
         self.id = '%s.translate' % parent.get_id()
-
-        self.x_axis_control = builder.set_id('x').set_parent(self).set_ui_context(ui_context).build()
-        self.y_axis_control = builder.set_id('y').set_parent(self).set_ui_context(ui_context).build()
-        self.z_axis_control = builder.set_id('z').set_parent(self).set_ui_context(ui_context).build()
 
         self.build()
         self.set_visible(False)
 
-    def build(self):
-
-        self.x_axis_control.set_effect('colored -d red')
-        self.x_axis_control.geo.rotate(Vector3(0, 1, 0), math.radians(90), Space.Parent)
-
-        self.y_axis_control.set_effect('colored -d green')
-        self.y_axis_control.geo.rotate(Vector3(1, 0, 0), math.radians(-90), Space.Parent)
-
-        self.z_axis_control.set_effect('colored -d blue')
-
-        for control in [self.x_axis_control, self.y_axis_control, self.z_axis_control]:
-            self.controls.append(control)
-            setEventFunction(control.on_event)
-
-    def get_id(self):
-        return self.id
-
     def on_manipulate(self, control, origin, movement):
-
-        translation = Vector3(0, 0, 0)
-
-        if control == self.x_axis_control:
-            if movement.x <= origin.x:
-                translation.x -= TranslateControlGroup.DELTA
-            else:
-                translation.x += TranslateControlGroup.DELTA
-
-        elif control == self.y_axis_control:
-            if movement.y <= origin.y:
-                translation.y += TranslateControlGroup.DELTA
-            else:
-                translation.y -= TranslateControlGroup.DELTA
-
-        elif control == self.z_axis_control:
-            if movement.x <= origin.x:
-                translation.z += TranslateControlGroup.DELTA
-            else:
-                translation.z -= TranslateControlGroup.DELTA
-
-        self.parent.node.translate(translation, Space.Local)
+        self.parent.node.translate(Translation.translate(self.get_control_axis(control), origin, movement), Space.Local)
