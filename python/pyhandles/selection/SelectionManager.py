@@ -11,7 +11,7 @@ class SelectionManager(object):
         self.ui_context = ui_context
 
         self.nodes = []
-        self.selection = []
+        self.selections = {}
         self.intersection = None
 
     def add(self, node):
@@ -22,22 +22,22 @@ class SelectionManager(object):
 
         if PointerCursor.is_interested(event):
             if event.isButtonDown(EventFlags.Button1):
-                self.on_click(getRayFromEvent(event))
+                self.on_click(self.ui_context.pointer, getRayFromEvent(event))
 
         elif ControllerCursor.is_interested(event):
             cursor = self.ui_context.get_cursor(event)
 
             if isinstance(cursor, ControllerCursor) and event.isButtonDown(EventFlags.Button1):
-                self.on_click(getRayFromPoint(int(cursor.get_position().x), int(cursor.get_position().y)))
+                self.on_click(cursor, getRayFromPoint(int(cursor.get_position().x), int(cursor.get_position().y)))
 
-    def on_click(self, ray):
+    def on_click(self, cursor, ray):
         if ray[0]:
             querySceneRay(ray[1], ray[2], self.on_intersect, QueryFlags.QuerySort | QueryFlags.QueryFirst)
 
             if self.intersection:
-                self.on_select()
-            elif self.selection:
-                self.on_release()
+                self.on_select(cursor)
+            elif cursor.id in self.selections and self.selections[cursor.id]:
+                self.on_release(cursor)
 
             self.intersection = None
 
@@ -48,22 +48,22 @@ class SelectionManager(object):
             elif distance < self.intersection[1]:
                 self.intersection = (node, distance)
 
-    def on_select(self):
+    def on_select(self, cursor):
         context = next((context for context in filter(lambda context: context, map(lambda node: node.match(self.intersection[0]), self.nodes))), [])
         if context:
-            if self.selection and self.selection != context:
-                self.on_release()
+            if cursor.id in self.selections and self.selections[cursor.id] != context:
+                self.on_release(cursor)
 
-            self.selection = list(context)
+            self.selections[cursor.id] = list(context)
 
             node = context.pop()
             node.on_select(context)
 
-    def on_release(self):
-        if self.selection:
-            context = list(self.selection)
+    def on_release(self, cursor):
+        if cursor.id in self.selections and self.selections[cursor.id]:
+            context = list(self.selections[cursor.id])
 
             node = context.pop()
             node.on_release(context)
 
-            self.selection = None
+            self.selections[cursor.id] = None
