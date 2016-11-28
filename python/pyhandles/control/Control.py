@@ -27,6 +27,12 @@ class Control(Selectable):
     def match(self, candidate):
         super(Control, self).match(candidate)
 
+    def show(self):
+        self.set_visible(True)
+
+    def hide(self):
+        self.set_visible(False)
+
     def on_select(self, context):
         super(Control, self).on_select(context)
 

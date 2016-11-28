@@ -9,7 +9,7 @@ from pyhandles.cursor.pointer.PointerCursor import PointerCursor
 
 class WhiskerControl(Control):
 
-    DEFAULT_LENGTH = 1.5
+    DEFAULT_LENGTH = 0.5
     DEFAULT_RADIUS1 = 0.05
     DEFAULT_RADIUS2 = 0.05
     DEFAULT_SUBDIVISIONS = 1

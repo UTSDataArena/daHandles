@@ -42,8 +42,8 @@ class ControllableSceneNode(SelectableSceneNode):
 
     def show_controls(self):
         for control in self.controls:
-            control.set_visible(True)
+            control.show()
 
     def hide_controls(self):
         for control in self.controls:
-            control.set_visible(False)
+            control.hide()

@@ -1,4 +1,5 @@
 from cyclops import *
+from euclid import *
 from omega import *
 
 from pyhandles.control.RotateControlGroup import Rotation
@@ -13,8 +14,8 @@ class TransformControlGroup(TriAxisControlGroup):
     ROTATE = 'r'
     TRANSLATE = 't'
 
-    def __init__(self, parent, builder, ui_context):
-        super(TransformControlGroup, self).__init__(parent, builder, ui_context)
+    def __init__(self, parent, builder, bounding_box, ui_context):
+        super(TransformControlGroup, self).__init__(parent, builder, bounding_box, ui_context)
 
         self.id = '%s.scale' % parent.get_id()
 
@@ -49,16 +50,19 @@ class TransformControlGroup(TriAxisControlGroup):
     def on_manipulate(self, control, origin, movement):
 
         if self.mode == TransformControlGroup.SCALE:
+            axis = self.get_control_axis(control)
 
-            # our current strategy to ensure that controls do not get obscured by the
-            # rescaled geometry is to also adjust the scale of the control so that it
-            # remains visible - a better long term strategy would be to determine the
-            # bounds of the geometry and draw the controls on the surface of this volume
+            self.parent.get_geo().setScale(self.parent.get_geo().getScale() + Scale.scale(axis, origin, movement))
 
-            object_scale, handle_scale = Scale.scale(self.get_control_axis(control), origin, self.parent.get_geo().getScale(), control.get_geo().getScale(), movement)
-
-            control.get_geo().setScale(handle_scale)
-            self.parent.get_geo().setScale(object_scale)
+            if axis == TriAxisControlGroup.X_AXIS:
+                direction = Scale.NEGATIVE if movement.x <= origin.x else Scale.POSITIVE
+                control.get_geo().translate(Vector3(Scale.INCREMENT / 2 * direction, 0, 0), Space.Parent)
+            elif axis == TriAxisControlGroup.Y_AXIS:
+                direction = Scale.POSITIVE if movement.y <= origin.y else Scale.NEGATIVE
+                control.get_geo().translate(Vector3(0, Scale.INCREMENT / 2 * direction, 0), Space.Parent)
+            elif axis == TriAxisControlGroup.Z_AXIS:
+                direction = Scale.POSITIVE if movement.x <= origin.x else Scale.NEGATIVE
+                control.get_geo().translate(Vector3(0, 0, Scale.INCREMENT / 2 * direction), Space.Parent)
 
         elif self.mode == TransformControlGroup.ROTATE:
             axis, angle = Rotation.rotate(self.get_control_axis(control), origin, movement)

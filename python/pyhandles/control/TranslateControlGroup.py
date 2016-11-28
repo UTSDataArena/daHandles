@@ -6,6 +6,9 @@ from pyhandles.control.TriAxisControlGroup import TriAxisControlGroup
 
 class Translation(object):
 
+    POSITIVE = 1
+    NEGATIVE = -1
+
     INCREMENT = 0.1
 
     @staticmethod
@@ -14,30 +17,24 @@ class Translation(object):
         translation = Vector3(0, 0, 0)
 
         if axis == TriAxisControlGroup.X_AXIS:
-            if delta.x <= origin.x:
-                translation.x -= Translation.INCREMENT
-            else:
-                translation.x += Translation.INCREMENT
+            direction = Translation.NEGATIVE if delta.x <= origin.x else Translation.POSITIVE
+            translation.x += Translation.INCREMENT * direction
 
         elif axis == TriAxisControlGroup.Y_AXIS:
-            if delta.y <= origin.y:
-                translation.y += Translation.INCREMENT
-            else:
-                translation.y -= Translation.INCREMENT
+            direction = Translation.POSITIVE if delta.y <= origin.y else Translation.NEGATIVE
+            translation.y += Translation.INCREMENT * direction
 
         elif axis == TriAxisControlGroup.Z_AXIS:
-            if delta.x <= origin.x:
-                translation.z += Translation.INCREMENT
-            else:
-                translation.z -= Translation.INCREMENT
+            direction = Translation.POSITIVE if delta.x <= origin.x else Translation.NEGATIVE
+            translation.z += Translation.INCREMENT * direction
 
         return translation
 
 
 class TranslateControlGroup(TriAxisControlGroup):
 
-    def __init__(self, parent, builder, ui_context):
-        super(TranslateControlGroup, self).__init__(parent, builder, ui_context)
+    def __init__(self, parent, builder, bounding_box, ui_context):
+        super(TranslateControlGroup, self).__init__(parent, builder, bounding_box, ui_context)
 
         self.id = '%s.translate' % parent.get_id()
 

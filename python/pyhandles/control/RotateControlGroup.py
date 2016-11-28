@@ -8,42 +8,40 @@ from pyhandles.control.TriAxisControlGroup import TriAxisControlGroup
 
 class Rotation(object):
 
+    POSITIVE = 1
+    NEGATIVE = -1
+
     INCREMENT = 1.0
 
     @staticmethod
     def rotate(axis, origin, delta):
+
+        direction = None
 
         rotation = 0
         rotation_axis = None
 
         if axis == TriAxisControlGroup.X_AXIS:
             rotation_axis = Vector3(1, 0, 0)
-            if delta.y <= origin.y:
-                rotation += Rotation.INCREMENT
-            else:
-                rotation -= Rotation.INCREMENT
+            direction = Rotation.POSITIVE if delta.y <= origin.y else Rotation.NEGATIVE
 
         elif axis == TriAxisControlGroup.Y_AXIS:
             rotation_axis = Vector3(0, 1, 0)
-            if delta.x <= origin.x:
-                rotation -= Rotation.INCREMENT
-            else:
-                rotation += Rotation.INCREMENT
+            direction = Rotation.NEGATIVE if delta.x <= origin.x else Rotation.POSITIVE
 
         elif axis == TriAxisControlGroup.Z_AXIS:
             rotation_axis = Vector3(0, 0, 1)
-            if delta.y <= origin.y:
-                rotation += Rotation.INCREMENT
-            else:
-                rotation -= Rotation.INCREMENT
+            direction = Rotation.POSITIVE if delta.y <= origin.y else Rotation.NEGATIVE
+
+        rotation += Rotation.INCREMENT * direction
 
         return rotation_axis, math.radians(rotation)
 
 
 class RotateControlGroup(TriAxisControlGroup):
 
-    def __init__(self, parent, builder, ui_context):
-        super(RotateControlGroup, self).__init__(parent, builder, ui_context)
+    def __init__(self, parent, builder, bounding_box, ui_context):
+        super(RotateControlGroup, self).__init__(parent, builder, bounding_box, ui_context)
 
         self.id = '%s.rotate' % parent.get_id()
 
