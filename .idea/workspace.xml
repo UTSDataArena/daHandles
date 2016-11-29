@@ -1,78 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="606f6d93-40aa-4508-b763-c0ac87a16520" name="Default" comment="Rename ui context">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/daHandles.iml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/pyhandles.iml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python/pyhandles/__init__.py" afterPath="$PROJECT_DIR$/tests/unit/daHandles/selection/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python/pyhandles/context/UiContext.py" afterPath="$PROJECT_DIR$/python/daHandles/context/UiContext.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python/pyhandles/context/__init__.py" afterPath="$PROJECT_DIR$/tests/unit/daHandles/cursor/pointer/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python/pyhandles/control/Control.py" afterPath="$PROJECT_DIR$/python/daHandles/control/Control.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python/pyhandles/control/ControlBuilder.py" afterPath="$PROJECT_DIR$/python/daHandles/control/ControlBuilder.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python/pyhandles/control/ControlGeometryBuilder.py" afterPath="$PROJECT_DIR$/python/daHandles/control/ControlGeometryBuilder.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python/pyhandles/control/ControlGroup.py" afterPath="$PROJECT_DIR$/python/daHandles/control/ControlGroup.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python/pyhandles/control/CustomControlGeometryBuilder.py" afterPath="$PROJECT_DIR$/python/daHandles/control/CustomControlGeometryBuilder.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python/pyhandles/control/CylinderControlGeometryBuilder.py" afterPath="$PROJECT_DIR$/python/daHandles/control/CylinderControlGeometryBuilder.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python/pyhandles/control/RotateControlGroup.py" afterPath="$PROJECT_DIR$/python/daHandles/control/RotateControlGroup.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python/pyhandles/control/RotateControlGroupBuilder.py" afterPath="$PROJECT_DIR$/python/daHandles/control/RotateControlGroupBuilder.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python/pyhandles/control/ScaleControlGroup.py" afterPath="$PROJECT_DIR$/python/daHandles/control/ScaleControlGroup.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python/pyhandles/control/ScaleControlGroupBuilder.py" afterPath="$PROJECT_DIR$/python/daHandles/control/ScaleControlGroupBuilder.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python/pyhandles/control/TransformControlGroup.py" afterPath="$PROJECT_DIR$/python/daHandles/control/TransformControlGroup.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python/pyhandles/control/TransformControlGroupBuilder.py" afterPath="$PROJECT_DIR$/python/daHandles/control/TransformControlGroupBuilder.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python/pyhandles/control/TranslateControlGroup.py" afterPath="$PROJECT_DIR$/python/daHandles/control/TranslateControlGroup.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python/pyhandles/control/TranslateControlGroupBuilder.py" afterPath="$PROJECT_DIR$/python/daHandles/control/TranslateControlGroupBuilder.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python/pyhandles/control/TriAxisControlGroup.py" afterPath="$PROJECT_DIR$/python/daHandles/control/TriAxisControlGroup.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python/pyhandles/control/WhiskerControl.py" afterPath="$PROJECT_DIR$/python/daHandles/control/WhiskerControl.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python/pyhandles/control/WhiskerControlBuilder.py" afterPath="$PROJECT_DIR$/python/daHandles/control/WhiskerControlBuilder.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python/pyhandles/control/__init__.py" afterPath="$PROJECT_DIR$/tests/unit/daHandles/cursor/controller/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python/pyhandles/cursor/Cursor.py" afterPath="$PROJECT_DIR$/python/daHandles/cursor/Cursor.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python/pyhandles/cursor/__init__.py" afterPath="$PROJECT_DIR$/tests/unit/daHandles/cursor/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python/pyhandles/cursor/controller/ControllerCursor.py" afterPath="$PROJECT_DIR$/python/daHandles/cursor/controller/ControllerCursor.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python/pyhandles/cursor/controller/SpaceNavControllerCursor.py" afterPath="$PROJECT_DIR$/python/daHandles/cursor/controller/SpaceNavControllerCursor.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python/pyhandles/cursor/controller/__init__.py" afterPath="$PROJECT_DIR$/tests/unit/daHandles/control/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python/pyhandles/cursor/pointer/MousePointerCursor.py" afterPath="$PROJECT_DIR$/python/daHandles/cursor/pointer/MousePointerCursor.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python/pyhandles/cursor/pointer/PointerCursor.py" afterPath="$PROJECT_DIR$/python/daHandles/cursor/pointer/PointerCursor.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python/pyhandles/cursor/pointer/__init__.py" afterPath="$PROJECT_DIR$/tests/unit/daHandles/context/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python/pyhandles/selection/ControllableSceneNode.py" afterPath="$PROJECT_DIR$/python/daHandles/selection/ControllableSceneNode.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python/pyhandles/selection/Selectable.py" afterPath="$PROJECT_DIR$/python/daHandles/selection/Selectable.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python/pyhandles/selection/SelectableSceneNode.py" afterPath="$PROJECT_DIR$/python/daHandles/selection/SelectableSceneNode.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python/pyhandles/selection/SelectionManager.py" afterPath="$PROJECT_DIR$/python/daHandles/selection/SelectionManager.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/python/pyhandles/selection/__init__.py" afterPath="$PROJECT_DIR$/tests/unit/daHandles/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/unit/pyhandles/__init__.py" afterPath="$PROJECT_DIR$/python/daHandles/selection/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/unit/pyhandles/context/__init__.py" afterPath="$PROJECT_DIR$/python/daHandles/cursor/pointer/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/unit/pyhandles/context/test_UiContext.py" afterPath="$PROJECT_DIR$/tests/unit/daHandles/context/test_UiContext.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/unit/pyhandles/control/__init__.py" afterPath="$PROJECT_DIR$/python/daHandles/cursor/controller/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/unit/pyhandles/control/test_Control.py" afterPath="$PROJECT_DIR$/tests/unit/daHandles/control/test_Control.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/unit/pyhandles/control/test_ControlBuilder.py" afterPath="$PROJECT_DIR$/tests/unit/daHandles/control/test_ControlBuilder.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/unit/pyhandles/control/test_ControlGeometryBuilder.py" afterPath="$PROJECT_DIR$/tests/unit/daHandles/control/test_ControlGeometryBuilder.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/unit/pyhandles/control/test_ControlGroup.py" afterPath="$PROJECT_DIR$/tests/unit/daHandles/control/test_ControlGroup.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/unit/pyhandles/control/test_CustomControlGeometryBuilder.py" afterPath="$PROJECT_DIR$/tests/unit/daHandles/control/test_CustomControlGeometryBuilder.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/unit/pyhandles/control/test_CylinderControlGeometryBuilder.py" afterPath="$PROJECT_DIR$/tests/unit/daHandles/control/test_CylinderControlGeometryBuilder.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/unit/pyhandles/control/test_RotateControlGroup.py" afterPath="$PROJECT_DIR$/tests/unit/daHandles/control/test_RotateControlGroup.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/unit/pyhandles/control/test_RotateControlGroupBuilder.py" afterPath="$PROJECT_DIR$/tests/unit/daHandles/control/test_RotateControlGroupBuilder.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/unit/pyhandles/control/test_ScaleControlGroup.py" afterPath="$PROJECT_DIR$/tests/unit/daHandles/control/test_ScaleControlGroup.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/unit/pyhandles/control/test_ScaleControlGroupBuilder.py" afterPath="$PROJECT_DIR$/tests/unit/daHandles/control/test_ScaleControlGroupBuilder.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/unit/pyhandles/control/test_TransformControlGroup.py" afterPath="$PROJECT_DIR$/tests/unit/daHandles/control/test_TransformControlGroup.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/unit/pyhandles/control/test_TransformControlGroupBuilder.py" afterPath="$PROJECT_DIR$/tests/unit/daHandles/control/test_TransformControlGroupBuilder.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/unit/pyhandles/control/test_TranslateControlGroup.py" afterPath="$PROJECT_DIR$/tests/unit/daHandles/control/test_TranslateControlGroup.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/unit/pyhandles/control/test_TranslateControlGroupBuilder.py" afterPath="$PROJECT_DIR$/tests/unit/daHandles/control/test_TranslateControlGroupBuilder.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/unit/pyhandles/control/test_WhiskerControl.py" afterPath="$PROJECT_DIR$/tests/unit/daHandles/control/test_WhiskerControl.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/unit/pyhandles/control/test_WhiskerControlBuilder.py" afterPath="$PROJECT_DIR$/tests/unit/daHandles/control/test_WhiskerControlBuilder.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/unit/pyhandles/cursor/__init__.py" afterPath="$PROJECT_DIR$/python/daHandles/cursor/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/unit/pyhandles/cursor/controller/__init__.py" afterPath="$PROJECT_DIR$/python/daHandles/control/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/unit/pyhandles/cursor/controller/test_ControllerCursor.py" afterPath="$PROJECT_DIR$/tests/unit/daHandles/cursor/controller/test_ControllerCursor.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/unit/pyhandles/cursor/controller/test_SpaceNavControllerCursor.py" afterPath="$PROJECT_DIR$/tests/unit/daHandles/cursor/controller/test_SpaceNavControllerCursor.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/unit/pyhandles/cursor/pointer/__init__.py" afterPath="$PROJECT_DIR$/python/daHandles/context/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/unit/pyhandles/cursor/pointer/test_MousePointerCursor.py" afterPath="$PROJECT_DIR$/tests/unit/daHandles/cursor/pointer/test_MousePointerCursor.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/unit/pyhandles/cursor/pointer/test_PointerCursor.py" afterPath="$PROJECT_DIR$/tests/unit/daHandles/cursor/pointer/test_PointerCursor.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/unit/pyhandles/cursor/test_Cursor.py" afterPath="$PROJECT_DIR$/tests/unit/daHandles/cursor/test_Cursor.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/unit/pyhandles/selection/__init__.py" afterPath="$PROJECT_DIR$/python/daHandles/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/unit/pyhandles/selection/test_ControllableSceneNode.py" afterPath="$PROJECT_DIR$/tests/unit/daHandles/selection/test_ControllableSceneNode.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/unit/pyhandles/selection/test_Selectable.py" afterPath="$PROJECT_DIR$/tests/unit/daHandles/selection/test_Selectable.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/unit/pyhandles/selection/test_SelectableSceneNode.py" afterPath="$PROJECT_DIR$/tests/unit/daHandles/selection/test_SelectableSceneNode.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/unit/pyhandles/selection/test_SelectionManager.py" afterPath="$PROJECT_DIR$/tests/unit/daHandles/selection/test_SelectionManager.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+    <list default="true" id="606f6d93-40aa-4508-b763-c0ac87a16520" name="Default" comment="Update documentation.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="daHandles.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -92,37 +23,17 @@
     <favorites_list name="daHandles" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.27446076">
+    <splitter split-orientation="horizontal" split-proportion="0.40192726">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
           <file leaf-file-name="manipulator.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/../playpen/omegalib/manipulator/manipulator.py">
+            <entry file="file://$PROJECT_DIR$/examples/manipulator.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="62">
-                  <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="SelectionManager.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/python/daHandles/selection/SelectionManager.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1798">
-                  <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+                <state relative-caret-position="651">
+                  <caret line="21" column="85" selection-start-line="21" selection-start-column="85" selection-end-line="21" selection-end-column="85" />
                   <folding>
-                    <element signature="e#0#19#0" expanded="true" />
+                    <element signature="e#0#11#0" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ControllableSceneNode.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/python/daHandles/selection/ControllableSceneNode.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="527">
-                  <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-                  <folding />
                 </state>
               </provider>
             </entry>
@@ -131,100 +42,15 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-          <file leaf-file-name="WhiskerControl.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/python/daHandles/control/WhiskerControl.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="558">
-                  <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-                  <folding>
-                    <element signature="e#0#19#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="UiContext.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/python/daHandles/context/UiContext.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="186">
-                  <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-                  <folding>
-                    <element signature="e#0#19#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Control.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/python/daHandles/control/Control.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="372">
-                  <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ControlGroup.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/python/daHandles/control/ControlGroup.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="434">
-                  <caret line="14" column="58" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="58" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ControlBuilder.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/python/daHandles/control/ControlBuilder.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="372">
-                  <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="TranslateControlGroup.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/python/daHandles/control/TranslateControlGroup.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="465">
-                  <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="TranslateControlGroupBuilder.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/python/daHandles/control/TranslateControlGroupBuilder.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="496">
-                  <caret line="16" column="87" selection-start-line="16" selection-start-column="87" selection-end-line="16" selection-end-column="87" />
-                  <folding>
-                    <element signature="e#0#59#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="WhiskerControlBuilder.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/python/daHandles/control/WhiskerControlBuilder.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="527">
-                  <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#0#59#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="test_UiContext.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/tests/unit/daHandles/context/test_UiContext.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="93">
-                  <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-                  <folding />
+          <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/README.md">
+              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+                <state split_layout="SPLIT">
+                  <first_editor relative-caret-position="651">
+                    <caret line="21" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+                    <folding />
+                  </first_editor>
+                  <second_editor />
                 </state>
               </provider>
             </entry>
@@ -294,6 +120,8 @@
         <option value="$PROJECT_DIR$/python/daHandles/control/WhiskerControl.py" />
         <option value="$PROJECT_DIR$/tests/unit/daHandles/context/test_UiContext.py" />
         <option value="$PROJECT_DIR$/../playpen/omegalib/manipulator/manipulator.py" />
+        <option value="$PROJECT_DIR$/examples/manipulator.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -425,6 +253,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="daHandles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="daHandles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="daHandles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examples" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -760,7 +602,21 @@
       <option name="project" value="LOCAL" />
       <updated>1479953161042</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Rename python module and project.">
+      <created>1480383220515</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1480383220515</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Implement example demonstrating use of the framework.">
+      <created>1480383905337</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1480383905337</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -771,10 +627,10 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21784233" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21829522" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29927385" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23858921" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23856549" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39968815" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -818,7 +674,9 @@
     <MESSAGE value="Initial implementation of a selectable scene node." />
     <MESSAGE value="Initial implementation of a controllable scene node." />
     <MESSAGE value="Initial implementation of a selection manager." />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial implementation of a selection manager." />
+    <MESSAGE value="Rename python module and project." />
+    <MESSAGE value="Implement example demonstrating use of the framework." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement example demonstrating use of the framework." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -827,16 +685,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/python/daHandles/control/WhiskerControlBuilder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/unit/daHandles/context/test_UiContext.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -906,17 +754,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/unit/test.py" />
     <entry file="file://$PROJECT_DIR$/tests/unit/daHandles/cursor/test_ControllerCursor.py" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/unit/daHandles/selection/test_Selectable.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="868">
@@ -1016,16 +853,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/daHandles/selection/SelectionManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1798">
-          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/unit/daHandles/selection/test_ControllableSceneNode.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="31">
@@ -1057,28 +884,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/daHandles/context/UiContext.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/python/daHandles/selection/Selectable.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="837">
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/daHandles/cursor/Cursor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -1110,68 +920,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/daHandles/control/Control.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/daHandles/control/ControlGroup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="14" column="58" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/daHandles/control/ControlBuilder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/daHandles/control/TranslateControlGroupBuilder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="16" column="87" selection-start-line="16" selection-start-column="87" selection-end-line="16" selection-end-column="87" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/daHandles/control/TranslateControlGroup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/daHandles/control/WhiskerControl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/daHandles/control/WhiskerControlBuilder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/python/daHandles/selection/ControllableSceneNode.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -1193,6 +941,117 @@
         <state relative-caret-position="93">
           <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/daHandles/control/WhiskerControlBuilder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/daHandles/control/TranslateControlGroupBuilder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="16" column="87" selection-start-line="16" selection-start-column="87" selection-end-line="16" selection-end-column="87" />
+          <folding>
+            <element signature="e#0#59#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/daHandles/control/TranslateControlGroup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/daHandles/control/ControlBuilder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/daHandles/control/ControlGroup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="14" column="58" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/daHandles/control/Control.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/daHandles/context/UiContext.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/daHandles/control/WhiskerControl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/daHandles/cursor/Cursor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="651">
+            <caret line="21" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/daHandles/selection/SelectionManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1367">
+          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/manipulator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="651">
+          <caret line="21" column="85" selection-start-line="21" selection-start-column="85" selection-end-line="21" selection-end-column="85" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
