@@ -9,21 +9,11 @@ from pyhandles.cursor.pointer.PointerCursor import PointerCursor
 
 class WhiskerControl(Control):
 
-    DEFAULT_LENGTH = 0.5
-    DEFAULT_RADIUS1 = 0.05
-    DEFAULT_RADIUS2 = 0.05
-    DEFAULT_SUBDIVISIONS = 1
-    DEFAULT_SIDES = 16
-
-    def __init__(self, id, parent, ui_context, length=DEFAULT_LENGTH, radius1=DEFAULT_RADIUS1, radius2=DEFAULT_RADIUS2, subdivisions=DEFAULT_SUBDIVISIONS, sides=DEFAULT_SIDES):
+    def __init__(self, id, parent, geometry_builder, ui_context):
         super(WhiskerControl, self).__init__(parent, ui_context)
 
         self.id = id
-        self.length = length
-        self.radius1 = radius1
-        self.radius2 = radius2
-        self.subdivisions = subdivisions
-        self.sides = sides
+        self.geometry_builder = geometry_builder
         self.geo = None
 
         self.position = Vector2(0, 0)
@@ -32,7 +22,7 @@ class WhiskerControl(Control):
         self.set_visible(False)
 
     def build(self):
-        self.geo = CylinderShape.create(self.length, self.radius1, self.radius2, self.subdivisions, self.sides)
+        self.geo = self.geometry_builder.build()
         self.geo.setName('%s.%s' % (self.parent.get_id(), self.id))
         self.geo.setSelectable(True)
 
