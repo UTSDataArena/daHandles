@@ -1,4 +1,6 @@
 import math
+import os
+
 from cyclops import *
 
 from daHandles.context.UiContext import UiContext
@@ -22,14 +24,16 @@ if __name__ == '__main__':
         - How to set up a selection manager to process user interactions via controls
     """
 
+    resources = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'resources')
+
     ui_context = UiContext()
-    ui_context.add_cursor(SpaceNavControllerCursor('spacenav', '/da/sw/omegalib/myCursor.png', ui_context))
+    ui_context.add_cursor(SpaceNavControllerCursor('spacenav', os.path.join(resources, 'cursor.png'), ui_context))
 
     getDefaultCamera().setControllerEnabled(False)
 
     geometry_builder = CustomControlGeometryBuilder()
     geometry_builder.set_name('handle')
-    geometry_builder.set_path('/da/dev/luke/sources/daHandles/resources/handle.obj')
+    geometry_builder.set_path(os.path.join(resources, 'handle.obj'))
 
     control_builder = WhiskerControlBuilder()
     control_builder.set_geometry_builder(geometry_builder)
