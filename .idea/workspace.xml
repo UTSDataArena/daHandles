@@ -1,85 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="606f6d93-40aa-4508-b763-c0ac87a16520" name="Default" comment="Update documentation.">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/manipulator.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/run.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/package.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/daHandles/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/daHandles/context/UiContext.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/daHandles/context/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/daHandles/control/Control.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/daHandles/control/ControlBuilder.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/daHandles/control/ControlGeometryBuilder.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/daHandles/control/ControlGroup.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/daHandles/control/CustomControlGeometryBuilder.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/daHandles/control/CylinderControlGeometryBuilder.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/daHandles/control/RotateControlGroup.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/daHandles/control/RotateControlGroupBuilder.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/daHandles/control/ScaleControlGroup.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/daHandles/control/ScaleControlGroupBuilder.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/daHandles/control/TransformControlGroup.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/daHandles/control/TransformControlGroupBuilder.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/daHandles/control/TranslateControlGroup.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/daHandles/control/TranslateControlGroupBuilder.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/daHandles/control/TriAxisControlGroup.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/daHandles/control/WhiskerControl.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/daHandles/control/WhiskerControlBuilder.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/daHandles/control/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/daHandles/cursor/Cursor.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/daHandles/cursor/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/daHandles/cursor/controller/ControllerCursor.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/daHandles/cursor/controller/SpaceNavControllerCursor.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/daHandles/cursor/controller/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/daHandles/cursor/pointer/MousePointerCursor.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/daHandles/cursor/pointer/PointerCursor.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/daHandles/cursor/pointer/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/daHandles/selection/ControllableSceneNode.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/daHandles/selection/Selectable.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/daHandles/selection/SelectableSceneNode.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/daHandles/selection/SelectionManager.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/daHandles/selection/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/cursor.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/handle.obj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/test.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/daHandles/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/daHandles/context/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/daHandles/context/test_UiContext.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/daHandles/control/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/daHandles/control/test_Control.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/daHandles/control/test_ControlBuilder.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/daHandles/control/test_ControlGeometryBuilder.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/daHandles/control/test_ControlGroup.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/daHandles/control/test_CustomControlGeometryBuilder.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/daHandles/control/test_CylinderControlGeometryBuilder.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/daHandles/control/test_RotateControlGroup.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/daHandles/control/test_RotateControlGroupBuilder.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/daHandles/control/test_ScaleControlGroup.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/daHandles/control/test_ScaleControlGroupBuilder.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/daHandles/control/test_TransformControlGroup.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/daHandles/control/test_TransformControlGroupBuilder.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/daHandles/control/test_TranslateControlGroup.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/daHandles/control/test_TranslateControlGroupBuilder.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/daHandles/control/test_WhiskerControl.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/daHandles/control/test_WhiskerControlBuilder.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/daHandles/cursor/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/daHandles/cursor/controller/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/daHandles/cursor/controller/test_ControllerCursor.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/daHandles/cursor/controller/test_SpaceNavControllerCursor.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/daHandles/cursor/pointer/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/daHandles/cursor/pointer/test_MousePointerCursor.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/daHandles/cursor/pointer/test_PointerCursor.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/daHandles/cursor/test_Cursor.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/daHandles/selection/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/daHandles/selection/test_ControllableSceneNode.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/daHandles/selection/test_Selectable.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/daHandles/selection/test_SelectableSceneNode.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/unit/daHandles/selection/test_SelectionManager.py" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/unit/daHandles/selection/__init__.py" afterPath="$PROJECT_DIR$/init.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
-    </list>
+    <list default="true" id="606f6d93-40aa-4508-b763-c0ac87a16520" name="Default" comment="" />
     <ignored path="daHandles.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -653,14 +575,28 @@
       <option name="project" value="LOCAL" />
       <updated>1480977015667</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Reconfigure package to act as an omegalib module.">
+      <created>1480981078174</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1480981078174</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Re-add relocated files.">
+      <created>1480981125191</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1480981125191</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="3840" height="2104" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="0" width="3840" height="2104" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15542138" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15542138" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -691,8 +627,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Tidy unit test implementations." />
-    <MESSAGE value="Allow controllers to decide if they are interested in a given event." />
     <MESSAGE value="Add base implementation for selectable objects." />
     <MESSAGE value="Add base implementation for controls." />
     <MESSAGE value="Add base implementation for control groups." />
@@ -716,7 +650,9 @@
     <MESSAGE value="Update project documentation." />
     <MESSAGE value="Re-organise example code." />
     <MESSAGE value="Remove hard-coded resource paths from manipulator example." />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove hard-coded resource paths from manipulator example." />
+    <MESSAGE value="Reconfigure package to act as an omegalib module." />
+    <MESSAGE value="Re-add relocated files." />
+    <option name="LAST_COMMIT_MESSAGE" value="Re-add relocated files." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
