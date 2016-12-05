@@ -27,10 +27,6 @@ if __name__ == '__main__':
 
     getDefaultCamera().setControllerEnabled(False)
 
-    geo1 = BoxShape.create(1, 1, 1)
-    geo1.setEffect('colored -d white')
-    bbox1 = (geo1.getBoundMinimum(), geo1.getBoundMaximum())
-
     geometry_builder = CustomControlGeometryBuilder()
     geometry_builder.set_name('handle')
     geometry_builder.set_path('/da/dev/luke/sources/daHandles/resources/handle.obj')
@@ -41,6 +37,10 @@ if __name__ == '__main__':
     transform_builder = TransformControlGroupBuilder()
     transform_builder.set_ui_context(ui_context)
     transform_builder.set_control_builder(control_builder)
+
+    geo1 = BoxShape.create(1, 1, 1)
+    geo1.setEffect('colored -d white')
+    bbox1 = (geo1.getBoundMinimum(), geo1.getBoundMaximum())
 
     box1 = ControllableSceneNode('box1', geo1)
     box1.add_control(transform_builder.set_parent(box1).set_bounding_box(bbox1).build())
