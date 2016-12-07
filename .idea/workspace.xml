@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="606f6d93-40aa-4508-b763-c0ac87a16520" name="Default" comment="" />
+    <list default="true" id="606f6d93-40aa-4508-b763-c0ac87a16520" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="daHandles.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,27 +22,15 @@
     <favorites_list name="daHandles" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5405657">
+    <splitter split-orientation="horizontal" split-proportion="0.2328256">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-          <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+          <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="62">
-                  <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+                <state relative-caret-position="31">
+                  <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
                   <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="init.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/init.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="155">
-                  <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-                  <folding>
-                    <element signature="e#0#21#0" expanded="true" />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -54,7 +44,7 @@
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="SPLIT">
                   <first_editor relative-caret-position="651">
-                    <caret line="21" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+                    <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
                     <folding />
                   </first_editor>
                   <second_editor />
@@ -79,13 +69,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/tests/unit/test.py" />
-        <option value="$PROJECT_DIR$/tests/test.py" />
-        <option value="$PROJECT_DIR$/tests/unit/daHandles/cursor/test_ControllerCursor.py" />
-        <option value="$PROJECT_DIR$/python/daHandles/cursor/Cursor.py" />
-        <option value="$PROJECT_DIR$/python/daHandles/cursor/ControllerCursor.py" />
-        <option value="$PROJECT_DIR$/python/daHandles/cursor/PointerCursor.py" />
-        <option value="$PROJECT_DIR$/python/daHandles/cursor/MousePointerCursor.py" />
         <option value="$PROJECT_DIR$/python/daHandles/cursor/pointer/MousePointerCursor.py" />
         <option value="$PROJECT_DIR$/tests/unit/daHandles/cursor/pointer/test_MonitorPointerCursor.py" />
         <option value="$PROJECT_DIR$/tests/unit/daHandles/cursor/test_Cursor.py" />
@@ -126,10 +109,17 @@
         <option value="$PROJECT_DIR$/python/daHandles/control/WhiskerControl.py" />
         <option value="$PROJECT_DIR$/tests/unit/daHandles/context/test_UiContext.py" />
         <option value="$PROJECT_DIR$/../playpen/omegalib/manipulator/manipulator.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/examples/manipulator.py" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/init.py" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/control/__init__.py" />
+        <option value="$PROJECT_DIR$/context/__init__.py" />
+        <option value="$PROJECT_DIR$/__init__.py" />
+        <option value="$PROJECT_DIR$/cursor/__init__.py" />
+        <option value="$PROJECT_DIR$/cursor/controller/__init__.py" />
+        <option value="$PROJECT_DIR$/cursor/pointer/__init__.py" />
+        <option value="$PROJECT_DIR$/selection/__init__.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -589,18 +579,46 @@
       <option name="project" value="LOCAL" />
       <updated>1480981125191</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Rename the init file - the omegalib python module documentation is misleading.">
+      <created>1480989348360</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1480989348360</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Update CMakeLists.txt according to an example python module I found on the web - the omegalib python module documentation appears to be inaccurate.">
+      <created>1480989708022</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1480989708022</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Update module initialisation for compatibility with omegalib.">
+      <created>1481069375182</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1481069375182</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Update readme documentation.">
+      <created>1481148838819</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1481148838819</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="3840" height="2104" extended-state="7" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15542138" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15542138" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24168399" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21725571" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29885656" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1418919" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -627,10 +645,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add base implementation for selectable objects." />
-    <MESSAGE value="Add base implementation for controls." />
-    <MESSAGE value="Add base implementation for control groups." />
-    <MESSAGE value="Add equals operator to control base class." />
     <MESSAGE value="Implement handles context, and use it to keep track of the UI container and any cursors that have been defined." />
     <MESSAGE value="Implement skeleton test suite for handles context." />
     <MESSAGE value="Update unit test comments." />
@@ -652,7 +666,11 @@
     <MESSAGE value="Remove hard-coded resource paths from manipulator example." />
     <MESSAGE value="Reconfigure package to act as an omegalib module." />
     <MESSAGE value="Re-add relocated files." />
-    <option name="LAST_COMMIT_MESSAGE" value="Re-add relocated files." />
+    <MESSAGE value="Rename the init file - the omegalib python module documentation is misleading." />
+    <MESSAGE value="Update CMakeLists.txt according to an example python module I found on the web - the omegalib python module documentation appears to be inaccurate." />
+    <MESSAGE value="Update module initialisation for compatibility with omegalib." />
+    <MESSAGE value="Update readme documentation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update readme documentation." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -661,43 +679,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/unit/daHandles/cursor/test_ControllerCursor.py" />
-    <entry file="file://$PROJECT_DIR$/cursor/Cursor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="12" column="84" selection-start-line="12" selection-start-column="84" selection-end-line="12" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cursor/controller/ControllerCursor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cursor/controller/SpaceNavControllerCursor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="9" column="59" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../playpen/omegalib/manipulator/manipulator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="18" column="62" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cursor/Cursor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cursor/controller/ControllerCursor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -947,23 +928,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="651">
-            <caret line="21" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/selection/SelectionManager.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1367">
           <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -973,7 +943,7 @@
         <state relative-caret-position="434">
           <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -983,7 +953,7 @@
         <state relative-caret-position="527">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
-            <element signature="e#0#59#0" expanded="true" />
+            <element signature="e#0#59#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1014,21 +984,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+    <entry file="file://$PROJECT_DIR$/cursor/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/selection/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cursor/pointer/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="62">
-          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cursor/controller/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/control/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="16" column="56" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/context/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/init.py">
+    <entry file="file://$PROJECT_DIR$/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+        <state relative-caret-position="186">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="651">
+            <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
