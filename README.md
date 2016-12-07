@@ -1,4 +1,4 @@
-# README.md
+# OMEGALIB - daHandles module 
 
 The daHandles library contains re-usable code modules to support the implementation of on-screen handles for direct manipulation of 3D objects within the Data Arena. It relies on *omegalib* and *cyclops*.
 
@@ -19,4 +19,6 @@ The library includes some basic example controls and control groups, which you m
 
 ## How To Use
 
-The best way to find out how to use the daHandles library to augment your existing visualisation applications is to look at an example.   See the *manipulator.py* script within the *examples* subdirectory of this repository for further details.
+Please see the following tutorial for further information:
+
+http://www.dataarena.net/all_tutorials/omigalib-tutorial/advanced-omegalibosg-applications/on-screen-handles/
