@@ -2,12 +2,10 @@ from euclid import *
 from omega import *
 
 from daHandles.control.TriAxisControlGroup import TriAxisControlGroup
+from daHandles.control.utility.Direction import Direction
 
 
 class Translation(object):
-
-    POSITIVE = 1
-    NEGATIVE = -1
 
     INCREMENT = 0.1
 
@@ -17,15 +15,15 @@ class Translation(object):
         translation = Vector3(0, 0, 0)
 
         if axis == TriAxisControlGroup.X_AXIS:
-            direction = Translation.NEGATIVE if delta.x <= origin.x else Translation.POSITIVE
+            direction = Direction.NEGATIVE if delta.x <= origin.x else Direction.POSITIVE
             translation.x += Translation.INCREMENT * direction
 
         elif axis == TriAxisControlGroup.Y_AXIS:
-            direction = Translation.POSITIVE if delta.y <= origin.y else Translation.NEGATIVE
+            direction = Direction.POSITIVE if delta.y <= origin.y else Direction.NEGATIVE
             translation.y += Translation.INCREMENT * direction
 
         elif axis == TriAxisControlGroup.Z_AXIS:
-            direction = Translation.POSITIVE if delta.x <= origin.x else Translation.NEGATIVE
+            direction = Direction.POSITIVE if delta.x <= origin.x else Direction.NEGATIVE
             translation.z += Translation.INCREMENT * direction
 
         return translation
