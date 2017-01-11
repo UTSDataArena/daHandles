@@ -55,6 +55,20 @@ class HoudiniParameter:
 
         self.children = []
 
+    def get_value(self, index=0):
+
+        if self.type == HoudiniParameter.HAPI_PARMTYPE_INT:
+            return self.engine.getIntegerParameter(self.asset_name, self.id, index)
+
+        elif self.type == HoudiniParameter.HAPI_PARMTYPE_FLOAT:
+            return self.engine.getFloatParameter(self.asset_name, self.id, index)
+
+        elif self.type == HoudiniParameter.HAPI_PARMTYPE_STRING:
+            return self.engine.getStringParameter(self.asset_name, self.id, index)
+
+        else:
+            raise HoudiniParameterException('Unable to get value on unsupported parameter type: %s' % self.type)
+
     def set_value(self, value):
 
         if self.type == HoudiniParameter.HAPI_PARMTYPE_INT:
@@ -91,8 +105,6 @@ class HoudiniParameterControl(GenericControl):
     def on_manipulate(self, position):
         if self.parameter and self.increment:
             direction = Direction.NEGATIVE if position.x <= self.position.x else Direction.POSITIVE
+            new_value = self.parameter.get_value() + (self.increment * direction)
 
-            # TODO: we need to get the current value of the parameter (according to its type) add the
-            #       increment (multiplied by direction) and set it as the new parameter value - some
-            #       additional special handling will be needed depending on the parameter type (i.e.,
-            #       different behaviour will be necessary for string choice parameters etc).
+            self.parameter.set_value(new_value)     # TODO: add support for non-numeric values
