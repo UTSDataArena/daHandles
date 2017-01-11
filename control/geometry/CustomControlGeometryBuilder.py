@@ -1,7 +1,7 @@
 from cyclops import *
 from omega import *
 
-from daHandles.control.ControlGeometryBuilder import ControlGeometryBuilder
+from daHandles.control.geometry.ControlGeometryBuilder import ControlGeometryBuilder
 
 
 class CustomControlGeometryBuilder(ControlGeometryBuilder):
