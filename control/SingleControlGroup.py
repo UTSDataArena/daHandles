@@ -23,7 +23,6 @@ class SingleControlGroup(ControlGroup):
         self.control.set_effect('colored -d red')
 
         self.controls.append(self.control)
-        #setEventFunction(self.control.on_event)
 
     def get_id(self):
         return self.id

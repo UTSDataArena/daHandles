@@ -45,7 +45,6 @@ class TriAxisControlGroup(ControlGroup):
 
         for control in [self.x_axis_control, self.y_axis_control, self.z_axis_control]:
             self.controls.append(control)
-            setEventFunction(control.on_event)
 
     def get_id(self):
         return self.id

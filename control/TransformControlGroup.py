@@ -28,9 +28,9 @@ class TransformControlGroup(TriAxisControlGroup):
     def build(self):
         super(TransformControlGroup, self).build()
 
-        setEventFunction(self.on_event)
-
     def on_event(self):
+        super(TransformControlGroup, self).on_event()
+
         if self.is_selected:
             event = getEvent()
 

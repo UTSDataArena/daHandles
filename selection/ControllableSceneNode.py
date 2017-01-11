@@ -35,6 +35,10 @@ class ControllableSceneNode(SelectableSceneNode):
             self.hide_controls()
             super(ControllableSceneNode, self).on_release(context)
 
+    def on_event(self):
+        for control in self.controls:
+            control.on_event()
+
     def add_control(self, control):
         self.controls.append(control)
         for geo in control.get_geo():

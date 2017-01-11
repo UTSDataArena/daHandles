@@ -19,7 +19,7 @@ class Cursor(object):
         """
         Respond to input events.
 
-        Register this method using the omegalib setEventFunction in order to
-        connect it to the application event stream.
+        Evaluate this method within the registered omegalib setEventFunction in
+        order to process the application event stream.
         """
         raise NotImplementedError

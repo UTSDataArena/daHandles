@@ -18,6 +18,12 @@ class SelectionManager(object):
         self.nodes.append(node)
 
     def on_event(self):
+
+        self.ui_context.on_event()
+
+        for node in self.nodes:
+            node.on_event()
+
         event = getEvent()
 
         if PointerCursor.is_interested(event):

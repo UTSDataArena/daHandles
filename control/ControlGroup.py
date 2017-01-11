@@ -46,5 +46,9 @@ class ControlGroup(Control):
             self.prepare(control, context)
             control.on_release(context)
 
+    def on_event(self):
+        for control in self.controls:
+            control.on_event()
+
     def on_manipulate(self, control, origin, movement):
         raise NotImplementedError
