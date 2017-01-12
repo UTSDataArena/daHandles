@@ -72,13 +72,13 @@ class HoudiniParameter:
     def set_value(self, value):
 
         if self.type == HoudiniParameter.HAPI_PARMTYPE_INT:
-            self.engine.setIntegerParameter(self.asset_name, self.id, value)
+            self.engine.setIntegerParameter(self.asset_name, self.id, int(value))
 
         elif self.type == HoudiniParameter.HAPI_PARMTYPE_FLOAT:
-            self.engine.setFloatParameter(self.asset_name, self.id, value)
+            self.engine.setFloatParameter(self.asset_name, self.id, float(value))
 
         elif self.type == HoudiniParameter.HAPI_PARMTYPE_STRING:
-            self.engine.setStringParameter(self.asset_name, self.id, value)
+            self.engine.setStringParameter(self.asset_name, self.id, str(value))
 
         else:
             raise HoudiniParameterException('Unable to set value on unsupported parameter type: %s' % self.type)
@@ -95,6 +95,7 @@ class HoudiniParameterControl(GenericControl):
 
         self.parameter = None
         self.increment = None
+        self.rate_limiter = None
 
     def set_parameter(self, parameter):
         self.parameter = parameter
@@ -102,9 +103,18 @@ class HoudiniParameterControl(GenericControl):
     def set_increment(self, increment):
         self.increment = increment
 
+    def set_rate_limiter(self, rate_limiter):
+        self.rate_limiter = rate_limiter
+
     def on_manipulate(self, position):
         if self.parameter and self.increment:
-            direction = Direction.NEGATIVE if position.x <= self.position.x else Direction.POSITIVE
-            new_value = self.parameter.get_value() + (self.increment * direction)
 
-            self.parameter.set_value(new_value)     # TODO: add support for non-numeric values
+            if self.parameter.type == HoudiniParameter.HAPI_PARMTYPE_STRING:
+                raise NotImplementedError   # TODO: add support for non-numeric values
+            else:
+                if self.rate_limiter and not self.rate_limiter.is_active():
+
+                    direction = Direction.NEGATIVE if position.x <= self.position.x else Direction.POSITIVE
+                    self.parameter.set_value(self.parameter.get_value() + (self.increment * direction))
+
+                self.set_position(position)

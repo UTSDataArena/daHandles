@@ -10,6 +10,7 @@ class HoudiniParameterControlBuilder(ControlBuilder):
         self.geometry_builder = None
         self.control_parameter = None
         self.control_increment = 1
+        self.control_rate_limiter = None
 
     def set_geometry_builder(self, geometry_builder):
         self.geometry_builder = geometry_builder
@@ -23,9 +24,13 @@ class HoudiniParameterControlBuilder(ControlBuilder):
         self.control_increment = control_increment
         return self
 
+    def set_control_rate_limiter(self, control_rate_limiter):
+        self.control_rate_limiter = control_rate_limiter
+
     def build(self):
         control = HoudiniParameterControl(self.id, self.parent, self.geometry_builder, self.ui_context)
         control.set_parameter(self.control_parameter)
         control.set_increment(self.control_increment)
+        control.set_rate_limiter(self.control_rate_limiter)
 
         return control
