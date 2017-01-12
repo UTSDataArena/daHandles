@@ -69,16 +69,16 @@ class HoudiniParameter:
         else:
             raise HoudiniParameterException('Unable to get value on unsupported parameter type: %s' % self.type)
 
-    def set_value(self, value):
+    def set_value(self, value, index=0):
 
         if self.type == HoudiniParameter.HAPI_PARMTYPE_INT:
-            self.engine.setIntegerParameterValue(self.asset_name, self.id, int(value))
+            self.engine.setIntegerParameterValue(self.asset_name, self.id, index, int(value))
 
         elif self.type == HoudiniParameter.HAPI_PARMTYPE_FLOAT:
-            self.engine.setFloatParameterValue(self.asset_name, self.id, float(value))
+            self.engine.setFloatParameterValue(self.asset_name, self.id, index, float(value))
 
         elif self.type == HoudiniParameter.HAPI_PARMTYPE_STRING:
-            self.engine.setStringParameterValue(self.asset_name, self.id, str(value))
+            self.engine.setStringParameterValue(self.asset_name, self.id, index, str(value))
 
         else:
             raise HoudiniParameterException('Unable to set value on unsupported parameter type: %s' % self.type)
@@ -94,11 +94,15 @@ class HoudiniParameterControl(GenericControl):
         super(HoudiniParameterControl, self).__init__(id, parent, geometry_builder, ui_context)
 
         self.parameter = None
+        self.value_index = None
         self.increment = None
         self.rate_limiter = None
 
     def set_parameter(self, parameter):
         self.parameter = parameter
+
+    def set_value_index(self, value_index):
+        self.value_index = value_index
 
     def set_increment(self, increment):
         self.increment = increment
@@ -115,6 +119,6 @@ class HoudiniParameterControl(GenericControl):
                 if self.rate_limiter and not self.rate_limiter.is_active():
 
                     direction = Direction.NEGATIVE if position.x <= self.position.x else Direction.POSITIVE
-                    self.parameter.set_value(self.parameter.get_value() + (self.increment * direction))
+                    self.parameter.set_value(self.parameter.get_value(self.value_index) + (self.increment * direction), self.value_index)
 
                 self.set_position(position)
