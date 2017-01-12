@@ -23,7 +23,7 @@ class HoudiniParameter:
     @staticmethod
     def load_parameters(engine, asset_name):
 
-        wrapped = []
+        parameters_by_name = {}
         parameters = engine.loadParameters(asset_name)
 
         for index in range(parameters.size()):
@@ -31,15 +31,15 @@ class HoudiniParameter:
 
             if parameter.parentId >= 0:
                 parent = next((parent for parent in filter(
-                    lambda parent: parent.id == parameter.parentId, wrapped)), None)
+                    lambda parent: parent.id == parameter.parentId, parameters_by_name.values())), None)
                 if parent:
                     parent.children.append(parameter)
                 else:
                     raise HoudiniParameterException('Unable to find parent with id: %s' % parameter.parentId)
             else:
-                wrapped.append(parameter)
+                parameters_by_name[parameter.name] = parameter
 
-        return wrapped
+        return parameters_by_name
 
     def __init__(self, engine, asset_name, parameter=None):
 
