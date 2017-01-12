@@ -58,13 +58,13 @@ class HoudiniParameter:
     def get_value(self, index=0):
 
         if self.type == HoudiniParameter.HAPI_PARMTYPE_INT:
-            return self.engine.getIntegerParameter(self.asset_name, self.id, index)
+            return self.engine.getIntegerParameterValue(self.asset_name, self.id, index)
 
         elif self.type == HoudiniParameter.HAPI_PARMTYPE_FLOAT:
-            return self.engine.getFloatParameter(self.asset_name, self.id, index)
+            return self.engine.getFloatParameterValue(self.asset_name, self.id, index)
 
         elif self.type == HoudiniParameter.HAPI_PARMTYPE_STRING:
-            return self.engine.getStringParameter(self.asset_name, self.id, index)
+            return self.engine.getStringParameterValue(self.asset_name, self.id, index)
 
         else:
             raise HoudiniParameterException('Unable to get value on unsupported parameter type: %s' % self.type)
@@ -72,13 +72,13 @@ class HoudiniParameter:
     def set_value(self, value):
 
         if self.type == HoudiniParameter.HAPI_PARMTYPE_INT:
-            self.engine.setIntegerParameter(self.asset_name, self.id, int(value))
+            self.engine.setIntegerParameterValue(self.asset_name, self.id, int(value))
 
         elif self.type == HoudiniParameter.HAPI_PARMTYPE_FLOAT:
-            self.engine.setFloatParameter(self.asset_name, self.id, float(value))
+            self.engine.setFloatParameterValue(self.asset_name, self.id, float(value))
 
         elif self.type == HoudiniParameter.HAPI_PARMTYPE_STRING:
-            self.engine.setStringParameter(self.asset_name, self.id, str(value))
+            self.engine.setStringParameterValue(self.asset_name, self.id, str(value))
 
         else:
             raise HoudiniParameterException('Unable to set value on unsupported parameter type: %s' % self.type)
