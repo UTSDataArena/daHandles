@@ -21,7 +21,7 @@ class Rotation(object):
 
         if axis == TriAxisControlGroup.X_AXIS:
             rotation_axis = Vector3(1, 0, 0)
-            direction = Direction.POSITIVE if delta.y <= origin.y else Direction.NEGATIVE
+            direction = Direction.NEGATIVE if delta.y <= origin.y else Direction.POSITIVE
 
         elif axis == TriAxisControlGroup.Y_AXIS:
             rotation_axis = Vector3(0, 1, 0)
