@@ -1,12 +1,10 @@
 from euclid import *
 
 from daHandles.control.TriAxisControlGroup import TriAxisControlGroup
+from daHandles.control.utility.Direction import Direction
 
 
 class Scale(object):
-
-    POSITIVE = 1
-    NEGATIVE = -1
 
     INCREMENT = 0.1
 
@@ -16,15 +14,15 @@ class Scale(object):
         scale = Vector3(0, 0, 0)
 
         if axis == TriAxisControlGroup.X_AXIS:
-            direction = Scale.NEGATIVE if delta.x <= origin.x else Scale.POSITIVE
+            direction = Direction.NEGATIVE if delta.x <= origin.x else Direction.POSITIVE
             scale.x += Scale.INCREMENT * direction
 
         elif axis == TriAxisControlGroup.Y_AXIS:
-            direction = Scale.POSITIVE if delta.y <= origin.y else Scale.NEGATIVE
+            direction = Direction.POSITIVE if delta.y <= origin.y else Direction.NEGATIVE
             scale.y += Scale.INCREMENT * direction
 
         elif axis == TriAxisControlGroup.Z_AXIS:
-            direction = Scale.POSITIVE if delta.x <= origin.x else Scale.NEGATIVE
+            direction = Direction.POSITIVE if delta.x <= origin.x else Direction.NEGATIVE
             scale.z += Scale.INCREMENT * direction
 
         return scale
@@ -46,11 +44,11 @@ class ScaleControlGroup(TriAxisControlGroup):
         self.parent.get_geo().setScale(self.parent.get_geo().getScale() + Scale.scale(axis, origin, movement))
 
         if axis == TriAxisControlGroup.X_AXIS:
-            direction = Scale.NEGATIVE if movement.x <= origin.x else Scale.POSITIVE
+            direction = Direction.NEGATIVE if movement.x <= origin.x else Direction.POSITIVE
             control.get_geo().translate(Vector3(Scale.INCREMENT / 2 * direction, 0, 0), Space.Parent)
         elif axis == TriAxisControlGroup.Y_AXIS:
-            direction = Scale.POSITIVE if movement.y <= origin.y else Scale.NEGATIVE
+            direction = Direction.POSITIVE if movement.y <= origin.y else Direction.NEGATIVE
             control.get_geo().translate(Vector3(0, Scale.INCREMENT / 2 * direction, 0), Space.Parent)
         elif axis == TriAxisControlGroup.Z_AXIS:
-            direction = Scale.POSITIVE if movement.x <= origin.x else Scale.NEGATIVE
+            direction = Direction.POSITIVE if movement.x <= origin.x else Direction.NEGATIVE
             control.get_geo().translate(Vector3(0, 0, Scale.INCREMENT / 2 * direction), Space.Parent)

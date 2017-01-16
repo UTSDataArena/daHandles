@@ -29,6 +29,9 @@ class TriAxisControlGroup(ControlGroup):
 
     def build(self):
 
+        # note: this control group assumes that the provided geometry is positioned
+        #       at the origin and is oriented along the z-axis
+
         self.x_axis_control = self.builder.set_id('x').set_parent(self).set_ui_context(self.ui_context).build()
         self.x_axis_control.set_effect('colored -d red')
         self.x_axis_control.geo.translate(Vector3(self.bounding_box[1].x, 0, 0), Space.Local)
@@ -45,7 +48,6 @@ class TriAxisControlGroup(ControlGroup):
 
         for control in [self.x_axis_control, self.y_axis_control, self.z_axis_control]:
             self.controls.append(control)
-            setEventFunction(control.on_event)
 
     def get_id(self):
         return self.id

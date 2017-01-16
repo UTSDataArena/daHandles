@@ -1,6 +1,6 @@
 from cyclops import *
 
-from daHandles.control.ControlGeometryBuilder import ControlGeometryBuilder
+from daHandles.control.geometry.ControlGeometryBuilder import ControlGeometryBuilder
 
 
 class CylinderControlGeometryBuilder(ControlGeometryBuilder):
