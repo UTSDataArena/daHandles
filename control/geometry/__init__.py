@@ -1,4 +1,5 @@
 from .ControlGeometryBuilder import ControlGeometryBuilder
 from .CustomControlGeometryBuilder import CustomControlGeometryBuilder
 from .CylinderControlGeometryBuilder import CylinderControlGeometryBuilder
+from .HoudiniControlGeometryBuilder import HoudiniControlGeometryBuilder
 from .SphereControlGeometryBuilder import SphereControlGeometryBuilder
