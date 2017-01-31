@@ -1,17 +1,11 @@
-from daHandles.control.ControlBuilder import ControlBuilder
 from daHandles.control.ScaleControlGroup import ScaleControlGroup
+from daHandles.control.TriAxisControlGroupBuilder import TriAxisControlGroupBuilder
 
 
-class ScaleControlGroupBuilder(ControlBuilder):
+class ScaleControlGroupBuilder(TriAxisControlGroupBuilder):
 
     def __init__(self):
         super(ScaleControlGroupBuilder, self).__init__()
 
-        self.control_builder = None
-
-    def set_control_builder(self, control_builder):
-        self.control_builder = control_builder
-        return self
-
     def build(self):
-        return ScaleControlGroup(self.parent, self.control_builder, self.ui_context)
+        return ScaleControlGroup(self.parent, self.control_builder, self.bounding_box, self.ui_context)
