@@ -97,6 +97,8 @@ class HoudiniParameterControl(GenericControl):
         self.value_index = None
         self.increment = None
         self.rate_limiter = None
+        self.min_value = None
+        self.max_value = None
 
     def set_parameter(self, parameter):
         self.parameter = parameter
@@ -110,6 +112,12 @@ class HoudiniParameterControl(GenericControl):
     def set_rate_limiter(self, rate_limiter):
         self.rate_limiter = rate_limiter
 
+    def set_min_value(self, min_value):
+        self.min_value = min_value
+
+    def set_max_value(self, max_value):
+        self.max_value = max_value
+
     def on_manipulate(self, position):
         if self.parameter and self.increment:
 
@@ -119,6 +127,9 @@ class HoudiniParameterControl(GenericControl):
                 if self.rate_limiter and not self.rate_limiter.is_active():
 
                     direction = Direction.NEGATIVE if position.x <= self.position.x else Direction.POSITIVE
-                    self.parameter.set_value(self.parameter.get_value(self.value_index) + (self.increment * direction), self.value_index)
+                    value = self.parameter.get_value(self.value_index) + (self.increment * direction)
+
+                    if (not self.min_value or self.min_value <= value) and (not self.max_value or value <= self.max_value):
+                        self.parameter.set_value(value, self.value_index)
 
                 self.set_position(position)
