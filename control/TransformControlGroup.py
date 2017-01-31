@@ -35,18 +35,30 @@ class TransformControlGroup(TriAxisControlGroup):
             event = getEvent()
 
             if event.getServiceType() == ServiceType.Keyboard:
+
                 if event.isKeyDown(ord(TransformControlGroup.SCALE)):
                     self.mode = TransformControlGroup.SCALE
+                    event.setProcessed()
+
                 elif event.isKeyUp(ord(TransformControlGroup.SCALE)):
                     self.mode = None
+                    event.setProcessed()
+
                 elif event.isKeyDown(ord(TransformControlGroup.ROTATE)):
                     self.mode = TransformControlGroup.ROTATE
+                    event.setProcessed()
+
                 elif event.isKeyUp(ord(TransformControlGroup.ROTATE)):
                     self.mode = None
+                    event.setProcessed()
+
                 elif event.isKeyDown(ord(TransformControlGroup.TRANSLATE)):
                     self.mode = TransformControlGroup.TRANSLATE
+                    event.setProcessed()
+
                 elif event.isKeyUp(ord(TransformControlGroup.TRANSLATE)):
                     self.mode = None
+                    event.setProcessed()
 
     def on_manipulate(self, control, origin, movement):
 

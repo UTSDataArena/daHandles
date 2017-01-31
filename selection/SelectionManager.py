@@ -40,10 +40,15 @@ class SelectionManager(object):
         if ray[0]:
             querySceneRay(ray[1], ray[2], self.on_intersect, QueryFlags.QuerySort | QueryFlags.QueryFirst)
 
+            event = getEvent()
+
             if self.intersection:
                 self.on_select(cursor)
+                event.setProcessed()
+
             elif cursor.id in self.selections and self.selections[cursor.id]:
                 self.on_release(cursor)
+                event.setProcessed()
 
             self.intersection = None
 
