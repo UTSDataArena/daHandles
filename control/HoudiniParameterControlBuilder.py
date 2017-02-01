@@ -12,6 +12,8 @@ class HoudiniParameterControlBuilder(ControlBuilder):
         self.control_value_index = 0
         self.control_increment = 1
         self.control_rate_limiter = None
+        self.control_min_value = None
+        self.control_max_value = None
 
     def set_geometry_builder(self, geometry_builder):
         self.geometry_builder = geometry_builder
@@ -32,11 +34,19 @@ class HoudiniParameterControlBuilder(ControlBuilder):
     def set_control_rate_limiter(self, control_rate_limiter):
         self.control_rate_limiter = control_rate_limiter
 
+    def set_control_min_value(self, control_min_value):
+        self.control_min_value = control_min_value
+
+    def set_control_max_value(self, control_max_value):
+        self.control_max_value = control_max_value
+
     def build(self):
         control = HoudiniParameterControl(self.id, self.parent, self.geometry_builder, self.ui_context)
         control.set_parameter(self.control_parameter)
         control.set_value_index(self.control_value_index)
         control.set_increment(self.control_increment)
         control.set_rate_limiter(self.control_rate_limiter)
+        control.set_min_value(self.control_min_value)
+        control.set_max_value(self.control_max_value)
 
         return control

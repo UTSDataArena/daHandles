@@ -1,17 +1,11 @@
-from daHandles.control.ControlBuilder import ControlBuilder
 from daHandles.control.RotateControlGroup import RotateControlGroup
+from daHandles.control.TriAxisControlGroupBuilder import TriAxisControlGroupBuilder
 
 
-class RotateControlGroupBuilder(ControlBuilder):
+class RotateControlGroupBuilder(TriAxisControlGroupBuilder):
 
     def __init__(self):
         super(RotateControlGroupBuilder, self).__init__()
 
-        self.control_builder = None
-
-    def set_control_builder(self, control_builder):
-        self.control_builder = control_builder
-        return self
-
     def build(self):
-        return RotateControlGroup(self.parent, self.control_builder, self.ui_context)
+        return RotateControlGroup(self.parent, self.control_builder, self.bounding_box, self.ui_context)

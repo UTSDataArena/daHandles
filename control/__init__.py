@@ -4,6 +4,8 @@ from .ControlGroup import ControlGroup
 from .GenericControl import GenericControl
 from .HoudiniParameterControl import HoudiniParameter, HoudiniParameterControl
 from .HoudiniParameterControlBuilder import HoudiniParameterControlBuilder
+from .HoudiniParameterScaleControlGroup import HoudiniParameterScaleControlGroup
+from .HoudiniParameterScaleControlGroupBuilder import HoudiniParameterScaleControlGroupBuilder
 from .RotateControlGroup import RotateControlGroup
 from .RotateControlGroupBuilder import RotateControlGroupBuilder
 from .ScaleControlGroup import ScaleControlGroup
@@ -15,6 +17,7 @@ from .TransformControlGroupBuilder import TransformControlGroupBuilder
 from .TranslateControlGroup import TranslateControlGroup
 from .TranslateControlGroupBuilder import TranslateControlGroupBuilder
 from .TriAxisControlGroup import TriAxisControlGroup
+from .TriAxisControlGroupBuilder import TriAxisControlGroupBuilder
 from .WhiskerControl import WhiskerControl
 from .WhiskerControlBuilder import WhiskerControlBuilder
 from .geometry import *

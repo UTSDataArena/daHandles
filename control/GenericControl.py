@@ -50,12 +50,14 @@ class GenericControl(Control):
             if PointerCursor.is_interested(event):
                 if event.isFlagSet(EventFlags.Button1) and not event.isButtonDown(EventFlags.Button1) and not event.isButtonUp(EventFlags.Button1):
                     self.on_manipulate(event.getPosition())
+                    event.setProcessed()
 
             elif ControllerCursor.is_interested(event):
                 cursor = self.ui_context.get_cursor(event)
 
                 if isinstance(cursor, ControllerCursor) and cursor.button1Pressed:
                     self.on_manipulate(cursor.get_position())
+                    event.setProcessed()
 
     def on_manipulate(self, position):
         raise NotImplementedError

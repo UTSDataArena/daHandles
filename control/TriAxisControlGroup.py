@@ -32,22 +32,25 @@ class TriAxisControlGroup(ControlGroup):
         # note: this control group assumes that the provided geometry is positioned
         #       at the origin and is oriented along the z-axis
 
-        self.x_axis_control = self.builder.set_id('x').set_parent(self).set_ui_context(self.ui_context).build()
+        self.x_axis_control = self.build_control(TriAxisControlGroup.X_AXIS)
         self.x_axis_control.set_effect('colored -d red')
         self.x_axis_control.geo.translate(Vector3(self.bounding_box[1].x, 0, 0), Space.Local)
         self.x_axis_control.geo.rotate(Vector3(0, 1, 0), math.radians(90), Space.Parent)
 
-        self.y_axis_control = self.builder.set_id('y').set_parent(self).set_ui_context(self.ui_context).build()
+        self.y_axis_control = self.build_control(TriAxisControlGroup.Y_AXIS)
         self.y_axis_control.set_effect('colored -d green')
         self.y_axis_control.geo.translate(Vector3(0, self.bounding_box[1].y, 0), Space.Local)
         self.y_axis_control.geo.rotate(Vector3(1, 0, 0), math.radians(-90), Space.Parent)
 
-        self.z_axis_control = self.builder.set_id('z').set_parent(self).set_ui_context(self.ui_context).build()
+        self.z_axis_control = self.build_control(TriAxisControlGroup.Z_AXIS)
         self.z_axis_control.set_effect('colored -d blue')
         self.z_axis_control.geo.translate(Vector3(0, 0, self.bounding_box[1].z), Space.Local)
 
         for control in [self.x_axis_control, self.y_axis_control, self.z_axis_control]:
             self.controls.append(control)
+
+    def build_control(self, id):
+        return self.builder.set_id(id).set_parent(self).set_ui_context(self.ui_context).build()
 
     def get_id(self):
         return self.id
