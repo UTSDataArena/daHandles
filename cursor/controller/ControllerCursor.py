@@ -16,12 +16,6 @@ class ControllerCursor(CustomImageCursor):
     def __init__(self, id, cursor_up_image_path, cursor_down_image_path, ui_context):
         super(ControllerCursor, self).__init__(id, cursor_up_image_path, cursor_down_image_path, ui_context)
 
-    def get_position(self):
-        return self.cursor.getPosition()
-
-    def set_position(self, position):
-        self.cursor.setPosition(position)
-
     def on_event(self):
 
         event = getEvent()

@@ -25,6 +25,12 @@ class CustomImageCursor(Cursor):
         if self.cursor_up_image:
             self.cursor.setData(self.cursor_up_image)
 
+    def get_position(self):
+        return self.cursor.getPosition()
+
+    def set_position(self, position):
+        self.cursor.setPosition(position)
+
     def on_move(self, event):
         raise NotImplementedError
 
