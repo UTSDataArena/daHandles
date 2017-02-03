@@ -26,12 +26,7 @@ class SpaceNavControllerCursor(ControllerCursor):
             x = self.cursor.getPosition().x + (dx * SpaceNavControllerCursor.MOTION_MULTIPLIER)
             y = self.cursor.getPosition().y + (dy * SpaceNavControllerCursor.MOTION_MULTIPLIER)
 
-            position = Vector2(self.cursor.getPosition().x, self.cursor.getPosition().y)
-
-            position.x = x
-            position.y = y
-
-            self.set_position(position)
+            self.set_position(Vector2(x, y))
 
     def on_button_up(self, event):
         super(SpaceNavControllerCursor, self).on_button_up(event)
