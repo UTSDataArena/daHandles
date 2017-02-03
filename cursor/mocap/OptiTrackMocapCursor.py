@@ -12,9 +12,15 @@ class OptiTrackMocapCursor(MocapCursor):
         super(OptiTrackMocapCursor, self).__init__(id, cursor_up_image_path, cursor_down_image_path, ui_context)
 
     def on_move(self, event):
-        super(OptiTrackMocapCursor, self).on_move(event)
 
-        pass    # TODO: add custom optitrack marker specific movement logic here
+        if event.getExtraDataItems() >= 2:
+
+            # TODO: this implementation is a guess - confirm actual behaviour
+
+            x = event.getExtraDataInt(0)
+            y = event.getExtraDataInt(1)
+
+            self.set_position(Vector2(x, y))
 
     def on_button_up(self, event):
         super(OptiTrackMocapCursor, self).on_button_up(event)
