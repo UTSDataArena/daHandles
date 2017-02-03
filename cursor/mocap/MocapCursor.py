@@ -25,7 +25,7 @@ class MocapCursor(CustomImageCursor):
 
         event = getEvent()
 
-        if MocapCursor.is_interested(event):
+        if MocapCursor.is_interested(event) and event.getType() == EventType.Update:
 
             orientation = event.getOrientation() * Vector3(0, 1, 0)
 
