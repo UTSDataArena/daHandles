@@ -4,6 +4,7 @@ from euclid import *
 
 from daHandles.control.Control import Control
 from daHandles.cursor.controller.ControllerCursor import ControllerCursor
+from daHandles.cursor.mocap.MocapCursor import MocapCursor
 from daHandles.cursor.pointer.PointerCursor import PointerCursor
 
 
@@ -56,6 +57,13 @@ class GenericControl(Control):
                 cursor = self.ui_context.get_cursor(event)
 
                 if isinstance(cursor, ControllerCursor) and cursor.button1Pressed:
+                    self.on_manipulate(cursor.get_position())
+                    event.setProcessed()
+
+            elif MocapCursor.is_interested(event):
+                cursor = self.ui_context.get_cursor(event)
+
+                if isinstance(cursor, MocapCursor) and cursor.pseudoButtonPressed:
                     self.on_manipulate(cursor.get_position())
                     event.setProcessed()
 

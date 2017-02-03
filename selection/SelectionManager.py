@@ -2,6 +2,7 @@ from omega import *
 from cyclops import *
 
 from daHandles.cursor.controller.ControllerCursor import ControllerCursor
+from daHandles.cursor.mocap.MocapCursor import MocapCursor
 from daHandles.cursor.pointer.PointerCursor import PointerCursor
 
 
@@ -34,6 +35,12 @@ class SelectionManager(object):
             cursor = self.ui_context.get_cursor(event)
 
             if isinstance(cursor, ControllerCursor) and event.isButtonDown(EventFlags.Button1):
+                self.on_click(cursor, getRayFromPoint(int(cursor.get_position().x), int(cursor.get_position().y)))
+
+        elif MocapCursor.is_interested(event):
+            cursor = self.ui_context.get_cursor(event)
+
+            if isinstance(cursor, MocapCursor) and cursor.pseudoButtonPressed:
                 self.on_click(cursor, getRayFromPoint(int(cursor.get_position().x), int(cursor.get_position().y)))
 
     def on_click(self, cursor, ray):
