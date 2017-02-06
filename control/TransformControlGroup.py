@@ -18,7 +18,7 @@ class TransformControlGroup(TriAxisControlGroup):
     def __init__(self, parent, builder, bounding_box, ui_context):
         super(TransformControlGroup, self).__init__(parent, builder, bounding_box, ui_context)
 
-        self.id = '%s.scale' % parent.get_id()
+        self.id = '%s.transform' % parent.get_id()
 
         self.build()
         self.set_visible(False)
