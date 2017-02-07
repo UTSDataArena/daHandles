@@ -17,7 +17,7 @@ class HoudiniParameterScaleControlGroup(ScaleControlGroup):
         self.max_value = None
 
         self.proxy = None
-        self.proxy_scale_factor = 1
+        self.scale_factor = None
 
         super(HoudiniParameterScaleControlGroup, self).__init__(parent, builder, bounding_box, ui_context)
 
@@ -33,8 +33,8 @@ class HoudiniParameterScaleControlGroup(ScaleControlGroup):
     def set_proxy(self, proxy):
         self.proxy = proxy
 
-    def set_proxy_scale_factor(self, proxy_scale_factor):
-        self.proxy_scale_factor = proxy_scale_factor
+    def set_scale_factor(self, scale_factor):
+        self.scale_factor = scale_factor
 
     def on_manipulate(self, control, origin, movement):
 
@@ -44,11 +44,10 @@ class HoudiniParameterScaleControlGroup(ScaleControlGroup):
 
         if (not self.min_value or self.min_value <= value) and (not self.max_value or value <= self.max_value):
 
-            increment = control.increment
-
             if self.proxy:
-                increment /= self.proxy_scale_factor
                 self.proxy.setScale(self.proxy.getScale() + Scale.scale(axis, origin, movement, control.increment))
+
+            increment = control.increment / self.scale_factor if self.scale_factor else control.increment
 
             if axis == Axis.X_AXIS:
                 control.get_geo().translate(Vector3(increment * direction, 0, 0), Space.Parent)

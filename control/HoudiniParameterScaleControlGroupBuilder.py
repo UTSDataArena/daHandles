@@ -13,7 +13,7 @@ class HoudiniParameterScaleControlGroupBuilder(ScaleControlGroupBuilder):
         self.max_value = None
 
         self.proxy = None
-        self.proxy_scale_factor = None
+        self.scale_factor = 1
 
     def set_parameter_mapping(self, parameter_mapping):
         self.parameter_mapping = parameter_mapping
@@ -31,8 +31,8 @@ class HoudiniParameterScaleControlGroupBuilder(ScaleControlGroupBuilder):
         self.proxy = proxy
         return self
 
-    def set_proxy_scale_factor(self, proxy_scale_factor):
-        self.proxy_scale_factor = proxy_scale_factor
+    def set_scale_factor(self, scale_factor):
+        self.scale_factor = scale_factor
         return self
 
     def build(self):
@@ -40,6 +40,6 @@ class HoudiniParameterScaleControlGroupBuilder(ScaleControlGroupBuilder):
         control.set_min_value(self.min_value)
         control.set_max_value(self.max_value)
         control.set_proxy(self.proxy)
-        control.set_proxy_scale_factor(self.proxy_scale_factor)
+        control.set_scale_factor(self.scale_factor)
 
         return control
