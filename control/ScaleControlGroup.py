@@ -10,19 +10,19 @@ class Scale(object):
     INCREMENT = 0.1
 
     @staticmethod
-    def scale(axis, origin, movement):
+    def scale(axis, origin, movement, increment=INCREMENT):
 
         scale = Vector3(0, 0, 0)
         direction = Direction.get_direction(axis, origin, movement)
 
         if axis == Axis.X_AXIS:
-            scale.x += Scale.INCREMENT * direction
+            scale.x += increment * direction
 
         elif axis == Axis.Y_AXIS:
-            scale.y += Scale.INCREMENT * direction
+            scale.y += increment * direction
 
         elif axis == Axis.Z_AXIS:
-            scale.z += Scale.INCREMENT * direction
+            scale.z += increment * direction
 
         return scale
 
