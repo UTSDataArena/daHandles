@@ -4,6 +4,7 @@ from euclid import *
 from omega import *
 
 from daHandles.control.TriAxisControlGroup import TriAxisControlGroup
+from daHandles.control.utility.Axis import Axis
 from daHandles.control.utility.Direction import Direction
 
 
@@ -19,15 +20,15 @@ class Rotation(object):
         rotation = 0
         rotation_axis = None
 
-        if axis == TriAxisControlGroup.X_AXIS:
+        if axis == Axis.X_AXIS:
             rotation_axis = Vector3(1, 0, 0)
             direction = Direction.NEGATIVE if delta.y <= origin.y else Direction.POSITIVE
 
-        elif axis == TriAxisControlGroup.Y_AXIS:
+        elif axis == Axis.Y_AXIS:
             rotation_axis = Vector3(0, 1, 0)
             direction = Direction.NEGATIVE if delta.x <= origin.x else Direction.POSITIVE
 
-        elif axis == TriAxisControlGroup.Z_AXIS:
+        elif axis == Axis.Z_AXIS:
             rotation_axis = Vector3(0, 0, 1)
             direction = Direction.POSITIVE if delta.y <= origin.y else Direction.NEGATIVE
 

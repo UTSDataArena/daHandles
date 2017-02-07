@@ -1,16 +1,14 @@
-from cyclops import *
-from euclid import *
-from omega import *
-
 from daHandles.control.ControlGroup import ControlGroup
+from daHandles.control.utility.Direction import Direction
 
 
-class SingleControlGroup(ControlGroup):
+class HoudiniParameterSliderControlGroup(ControlGroup):
 
     def __init__(self, parent, builder, ui_context):
-        super(SingleControlGroup, self).__init__(parent, ui_context)
+        super(HoudiniParameterSliderControlGroup, self).__init__(parent, ui_context)
 
         self.id = None
+        self.axis = None
         self.control = None
         self.builder = builder
 
@@ -27,5 +25,15 @@ class SingleControlGroup(ControlGroup):
     def get_id(self):
         return self.id
 
+    def get_axis(self):
+        return self.axis
+
+    def set_axis(self, axis):
+        self.axis = axis
+
     def on_manipulate(self, control, origin, movement):
-        super(SingleControlGroup, self).on_manipulate(control, origin, movement)
+
+        direction = Direction.get_direction(self.axis, origin, movement)
+        value = control.parameter.get_value(control.value_index) + (control.increment * direction)
+
+        control.parameter.set_value(value, control.value_index)
