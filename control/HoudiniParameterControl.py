@@ -119,17 +119,13 @@ class HoudiniParameterControl(GenericControl):
         self.max_value = max_value
 
     def on_manipulate(self, position):
+
         if self.parameter and self.increment:
 
             if self.parameter.type == HoudiniParameter.HAPI_PARMTYPE_STRING:
                 raise NotImplementedError   # TODO: add support for non-numeric values
             else:
-                if self.rate_limiter and not self.rate_limiter.is_active():
+                if self.rate_limiter and not self.rate_limiter.is_active():     # TODO: what if no rate limiter is specified?
 
-                    direction = Direction.NEGATIVE if position.x <= self.position.x else Direction.POSITIVE
-                    value = self.parameter.get_value(self.value_index) + (self.increment * direction)
-
-                    if (not self.min_value or self.min_value <= value) and (not self.max_value or value <= self.max_value):
-                        self.parameter.set_value(value, self.value_index)
-
-                self.set_position(position)
+                    self.parent.on_manipulate(self, self.position, position)
+                    self.set_position(position)
