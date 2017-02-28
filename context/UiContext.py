@@ -22,7 +22,9 @@ class UiContext(object):
         self.container = Container.create(ContainerLayout.LayoutFree, self.ui.getUi())
 
     def get_cursor(self, event):
-        return self.cursors[event.getUserId()]
+        for cursor in self.cursors:
+            if cursor.get_user_id() == event.getUserId():
+                return cursor
 
     def add_cursor(self, cursor):
         self.cursors.append(cursor)

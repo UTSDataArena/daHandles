@@ -16,8 +16,8 @@ class MocapCursor(CustomImageCursor):
     def is_interested(event):
         return event.getServiceType() == ServiceType.Mocap
 
-    def __init__(self, id, cursor_up_image_path, cursor_down_image_path, ui_context):
-        super(MocapCursor, self).__init__(id, cursor_up_image_path, cursor_down_image_path, ui_context)
+    def __init__(self, id, user_id, cursor_up_image_path, cursor_down_image_path, ui_context):
+        super(MocapCursor, self).__init__(id, user_id, cursor_up_image_path, cursor_down_image_path, ui_context)
 
         self.pseudoButtonPressed = False
 

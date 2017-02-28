@@ -10,8 +10,8 @@ class SpaceNavControllerCursor(ControllerCursor):
 
     MOTION_MULTIPLIER = 3   # spacenav motion is very fine-grained
 
-    def __init__(self, id, cursor_up_image_path, cursor_down_image_path, ui_context):
-        super(SpaceNavControllerCursor, self).__init__(id, cursor_up_image_path, cursor_down_image_path, ui_context)
+    def __init__(self, id, user_id, cursor_up_image_path, cursor_down_image_path, ui_context):
+        super(SpaceNavControllerCursor, self).__init__(id, user_id, cursor_up_image_path, cursor_down_image_path, ui_context)
 
         self.button1Pressed = False
         self.button2Pressed = False

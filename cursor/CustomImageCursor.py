@@ -11,10 +11,12 @@ class CustomImageCursor(Cursor):
     def load_image(path):
         return loadImage(path) if path else None
 
-    def __init__(self, id, cursor_up_image_path, cursor_down_image_path, ui_context):
+    def __init__(self, id, user_id, cursor_up_image_path, cursor_down_image_path, ui_context):
         super(CustomImageCursor, self).__init__(id)
 
         self.ui_context = ui_context
+
+        self.user_id = user_id
 
         self.cursor = Image.create(self.ui_context.container)
         self.cursor.setSize(Vector2(Cursor.DEFAULT_SIZE, Cursor.DEFAULT_SIZE))
@@ -24,6 +26,9 @@ class CustomImageCursor(Cursor):
 
         if self.cursor_up_image:
             self.cursor.setData(self.cursor_up_image)
+
+    def get_user_id(self):
+        return self.user_id
 
     def get_position(self):
         return self.cursor.getPosition()
