@@ -45,9 +45,9 @@ class GenericControl(Control):
     def set_position(self, position):
         self.position = position
 
-    def on_event(self):
+    def on_event(self, event):
         if self.is_selected:
-            event = getEvent()
+
             if PointerCursor.is_interested(event):
                 if event.isFlagSet(EventFlags.Button1) and not event.isButtonDown(EventFlags.Button1) and not event.isButtonUp(EventFlags.Button1):
                     self.on_manipulate(event.getPosition())

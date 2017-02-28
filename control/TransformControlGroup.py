@@ -29,11 +29,10 @@ class TransformControlGroup(TriAxisControlGroup):
     def build(self):
         super(TransformControlGroup, self).build()
 
-    def on_event(self):
-        super(TransformControlGroup, self).on_event()
+    def on_event(self, event):
+        super(TransformControlGroup, self).on_event(event)
 
         if self.is_selected:
-            event = getEvent()
 
             if event.getServiceType() == ServiceType.Keyboard:
 

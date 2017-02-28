@@ -27,6 +27,6 @@ class UiContext(object):
     def add_cursor(self, cursor):
         self.cursors.append(cursor)
 
-    def on_event(self):
+    def on_event(self, event):
         for cursor in self.cursors:
-            cursor.on_event()
+            cursor.on_event(event)

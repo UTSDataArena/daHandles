@@ -21,9 +21,7 @@ class MocapCursor(CustomImageCursor):
 
         self.pseudoButtonPressed = False
 
-    def on_event(self):
-
-        event = getEvent()
+    def on_event(self, event):
 
         if MocapCursor.is_interested(event) and event.getType() == EventType.Update:
 

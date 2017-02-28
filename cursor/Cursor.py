@@ -15,7 +15,7 @@ class Cursor(object):
 
         self.id = id
 
-    def on_event(self):
+    def on_event(self, event):
         """
         Respond to input events.
 

@@ -35,9 +35,9 @@ class ControllableSceneNode(SelectableSceneNode):
             self.hide_controls()
             super(ControllableSceneNode, self).on_release(context)
 
-    def on_event(self):
+    def on_event(self, event):
         for control in self.controls:
-            control.on_event()
+            control.on_event(event)
 
     def add_control(self, control):
         self.controls.append(control)

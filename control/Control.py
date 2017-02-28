@@ -39,5 +39,5 @@ class Control(Selectable):
     def on_release(self, context):
         super(Control, self).on_release(context)
 
-    def on_event(self):
+    def on_event(self, event):
         raise NotImplementedError
