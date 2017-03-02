@@ -40,7 +40,7 @@ class SelectionManager(object):
         elif MocapCursor.is_interested(event):
             cursor = self.ui_context.get_cursor(event)
 
-            if isinstance(cursor, MocapCursor) and cursor.pseudoButtonPressed:
+            if isinstance(cursor, MocapCursor) and cursor.isButtonDown():
                 self.on_click(event, cursor, getRayFromPoint(int(cursor.get_position().x), int(cursor.get_position().y)))
 
     def on_click(self, event, cursor, ray):
