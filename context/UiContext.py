@@ -26,6 +26,9 @@ class UiContext(object):
         self.container = Container.create(ContainerLayout.LayoutFree, self.ui.getUi())
         self.container.setAutosize(False)
         self.container.setSize(Vector2(size[0], size[1]))
+        self.container.get3dSettings().enable3d = True
+        self.container.get3dSettings().position = Vector3(0, 2.5, -2)
+        self.container.get3dSettings().node = getScene()
 
     def get_cursor(self, event):
         for cursor in self.cursors:
