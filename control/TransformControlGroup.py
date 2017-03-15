@@ -19,7 +19,7 @@ class TransformControlGroup(TriAxisControlGroup):
     def __init__(self, parent, builder, bounding_box, ui_context):
         super(TransformControlGroup, self).__init__(parent, builder, bounding_box, ui_context)
 
-        self.id = '%s.scale' % parent.get_id()
+        self.id = '%s.transform' % parent.get_id()
 
         self.build()
         self.set_visible(False)
@@ -29,11 +29,10 @@ class TransformControlGroup(TriAxisControlGroup):
     def build(self):
         super(TransformControlGroup, self).build()
 
-    def on_event(self):
-        super(TransformControlGroup, self).on_event()
+    def on_event(self, event):
+        super(TransformControlGroup, self).on_event(event)
 
         if self.is_selected:
-            event = getEvent()
 
             if event.getServiceType() == ServiceType.Keyboard:
 

@@ -1,11 +1,10 @@
-from euclid import *
 from omega import *
 from omegaToolkit import *
 
-from daHandles.cursor.Cursor import Cursor
+from daHandles.cursor.CustomImageCursor import CustomImageCursor
 
 
-class ControllerCursor(Cursor):
+class ControllerCursor(CustomImageCursor):
     """
     Base class for all cursors of the controller type.
     """
@@ -14,24 +13,10 @@ class ControllerCursor(Cursor):
     def is_interested(event):
         return event.getServiceType() == ServiceType.Controller
 
-    def __init__(self, id, cursor_image_path, ui_context):
-        super(ControllerCursor, self).__init__(id)
+    def __init__(self, id, user_id, cursor_up_image_path, cursor_down_image_path, ui_context):
+        super(ControllerCursor, self).__init__(id, user_id, cursor_up_image_path, cursor_down_image_path, ui_context)
 
-        self.ui_context = ui_context
-
-        self.cursor = Image.create(self.ui_context.container)
-        self.cursor.setSize(Vector2(Cursor.DEFAULT_SIZE, Cursor.DEFAULT_SIZE))
-        self.cursor.setData(loadImage(cursor_image_path))
-
-    def get_position(self):
-        return self.cursor.getPosition()
-
-    def set_position(self, position):
-        self.cursor.setPosition(position)
-
-    def on_event(self):
-
-        event = getEvent()
+    def on_event(self, event):
 
         if ControllerCursor.is_interested(event):
 
@@ -41,12 +26,3 @@ class ControllerCursor(Cursor):
                 self.on_button_down(event)
             elif event.getType() == EventType.Update:
                 self.on_move(event)
-
-    def on_move(self, event):
-        raise NotImplementedError
-
-    def on_button_up(self, event):
-        raise NotImplementedError
-
-    def on_button_down(self, event):
-        raise NotImplementedError

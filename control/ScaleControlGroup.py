@@ -1,4 +1,6 @@
 from euclid import *
+from omega import *
+
 
 from daHandles.control.TriAxisControlGroup import TriAxisControlGroup
 from daHandles.control.utility.Axis import Axis

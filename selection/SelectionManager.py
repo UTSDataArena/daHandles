@@ -2,6 +2,7 @@ from omega import *
 from cyclops import *
 
 from daHandles.cursor.controller.ControllerCursor import ControllerCursor
+from daHandles.cursor.mocap.MocapCursor import MocapCursor
 from daHandles.cursor.pointer.PointerCursor import PointerCursor
 
 
@@ -19,28 +20,32 @@ class SelectionManager(object):
 
     def on_event(self):
 
-        self.ui_context.on_event()
+        event = getEvent()
+
+        self.ui_context.on_event(event)
 
         for node in self.nodes:
-            node.on_event()
-
-        event = getEvent()
+            node.on_event(event)
 
         if PointerCursor.is_interested(event):
             if event.isButtonDown(EventFlags.Button1):
-                self.on_click(self.ui_context.pointer, getRayFromEvent(event))
+                self.on_click(event, self.ui_context.pointer, getRayFromEvent(event))
 
         elif ControllerCursor.is_interested(event):
             cursor = self.ui_context.get_cursor(event)
 
             if isinstance(cursor, ControllerCursor) and event.isButtonDown(EventFlags.Button1):
-                self.on_click(cursor, getRayFromPoint(int(cursor.get_position().x), int(cursor.get_position().y)))
+                self.on_click(event, cursor, getRayFromPoint(int(cursor.get_position().x), int(cursor.get_position().y)))
 
-    def on_click(self, cursor, ray):
+        elif MocapCursor.is_interested(event):
+            cursor = self.ui_context.get_cursor(event)
+
+            if isinstance(cursor, MocapCursor) and cursor.isButtonDown():
+                self.on_click(event, cursor, getRayFromPoint(int(cursor.get_position().x), int(cursor.get_position().y)))
+
+    def on_click(self, event, cursor, ray):
         if ray[0]:
             querySceneRay(ray[1], ray[2], self.on_intersect, QueryFlags.QuerySort | QueryFlags.QueryFirst)
-
-            event = getEvent()
 
             if self.intersection:
                 self.on_select(cursor)
