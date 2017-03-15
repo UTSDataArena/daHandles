@@ -32,7 +32,7 @@ class MocapCursor(CustomImageCursor):
 
         button_down = False
 
-        if self.pseudoButtonPressed and not self.psuedoButtonPressHandled:
+        if self.pseudoButtonPressed and not self.pseudoButtonPressHandled:
             self.pseudoButtonPressHandled = True
             button_down = True
 
