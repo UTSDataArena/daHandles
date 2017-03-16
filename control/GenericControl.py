@@ -2,10 +2,11 @@ from omega import *
 from cyclops import *
 from euclid import *
 
+from daInput.cursor.controller.ControllerCursor import ControllerCursor
+from daInput.cursor.mocap.MocapCursor import MocapCursor
+from daInput.cursor.pointer.PointerCursor import PointerCursor
+
 from daHandles.control.Control import Control
-from daHandles.cursor.controller.ControllerCursor import ControllerCursor
-from daHandles.cursor.mocap.MocapCursor import MocapCursor
-from daHandles.cursor.pointer.PointerCursor import PointerCursor
 
 
 class GenericControl(Control):
