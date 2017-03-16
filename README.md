@@ -6,7 +6,7 @@ The daHandles library contains re-usable code modules to support the implementat
 
 This library includes support for the following features and functionality:
 
- - Reusable abstractions for different types of cursor, control or groups of controls
+ - Reusable abstractions for different types of on-screen control or groups of controls
  - Customisable on-screen control appearance and geometry
  - Configurable selection manager, which is able to track independent selections for each cursor in the environment
  - Houdini Engine integration via the daHEngine module
