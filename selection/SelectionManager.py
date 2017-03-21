@@ -35,13 +35,13 @@ class SelectionManager(object):
             cursor = self.ui_context.get_cursor(event)
 
             if isinstance(cursor, ControllerCursor) and event.isButtonDown(EventFlags.Button1):
-                self.on_click(event, cursor, getRayFromPoint(int(cursor.get_position().x), int(cursor.get_position().y)))
+                self.on_click(event, cursor, (True, cursor.get_position(), cursor.get_direction(getDefaultCamera())))
 
         elif MocapCursor.is_interested(event):
             cursor = self.ui_context.get_cursor(event)
 
             if isinstance(cursor, MocapCursor) and cursor.isButtonDown():
-                self.on_click(event, cursor, getRayFromPoint(int(cursor.get_position().x), int(cursor.get_position().y)))
+                self.on_click(event, cursor, (True, cursor.get_position(), cursor.get_direction(getDefaultCamera())))
 
     def on_click(self, event, cursor, ray):
         if ray[0]:
