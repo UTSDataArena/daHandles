@@ -73,13 +73,13 @@ class SelectionManager(object):
             self.selections[cursor.id] = list(context)
 
             node = context.pop()
-            node.on_select(context)
+            node.on_select(cursor, context)
 
     def on_release(self, cursor):
         if cursor.id in self.selections and self.selections[cursor.id]:
             context = list(self.selections[cursor.id])
 
             node = context.pop()
-            node.on_release(context)
+            node.on_release(cursor, context)
 
             self.selections[cursor.id] = None

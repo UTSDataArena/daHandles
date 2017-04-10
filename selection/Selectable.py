@@ -6,6 +6,7 @@ class Selectable(object):
     def __init__(self):
         super(Selectable, self).__init__()
 
+        self.selector = None
         self.is_selected = False
 
     def __eq__(self, other):
@@ -20,8 +21,10 @@ class Selectable(object):
     def match(self, candidate):
         raise NotImplementedError
 
-    def on_select(self, context):
+    def on_select(self, selector, context):
+        self.selector = selector
         self.is_selected = True
 
-    def on_release(self, context):
+    def on_release(self, selector, context):
+        self.selector = None
         self.is_selected = False
