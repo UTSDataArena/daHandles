@@ -33,11 +33,11 @@ class Control(Selectable):
     def hide(self):
         self.set_visible(False)
 
-    def on_select(self, selector, context):
-        super(Control, self).on_select(selector, context)
+    def on_select(self, context):
+        super(Control, self).on_select(context)
 
-    def on_release(self, selector, context):
-        super(Control, self).on_release(selector, context)
+    def on_release(self, context):
+        super(Control, self).on_release(context)
 
     def on_event(self, event):
         raise NotImplementedError

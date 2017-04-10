@@ -21,10 +21,10 @@ class Selectable(object):
     def match(self, candidate):
         raise NotImplementedError
 
-    def on_select(self, selector, context):
-        self.selector = selector
+    def on_select(self, context):
+        self.selector = context.selector
         self.is_selected = True
 
-    def on_release(self, selector, context):
+    def on_release(self, context):
         self.selector = None
         self.is_selected = False

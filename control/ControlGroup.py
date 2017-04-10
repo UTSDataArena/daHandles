@@ -25,26 +25,26 @@ class ControlGroup(Control):
 
         return context
 
-    def prepare(self, selector, selection, context):
+    def prepare(self, selection, context):
         for control in self.controls:
             if control.is_selected and control != selection:
-                control.on_release(selector, context)
+                control.on_release(context)
 
-    def on_select(self, selector, context):
-        super(ControlGroup, self).on_select(selector, context)
-
-        control = context.pop()
-        if control:
-            self.prepare(selector, control, context)
-            control.on_select(selector, context)
-
-    def on_release(self, selector, context):
-        super(ControlGroup, self).on_release(selector, context)
+    def on_select(self, context):
+        super(ControlGroup, self).on_select(context)
 
         control = context.pop()
         if control:
-            self.prepare(selector, control, context)
-            control.on_release(selector, context)
+            self.prepare(control, context)
+            control.on_select(context)
+
+    def on_release(self, context):
+        super(ControlGroup, self).on_release(context)
+
+        control = context.pop()
+        if control:
+            self.prepare(control, context)
+            control.on_release(context)
 
     def on_event(self, event):
         for control in self.controls:
