@@ -5,6 +5,8 @@ from daInput.cursor.controller.ControllerCursor import ControllerCursor
 from daInput.cursor.mocap.MocapCursor import MocapCursor
 from daInput.cursor.pointer.PointerCursor import PointerCursor
 
+from daHandles.selection.SelectionContext import SelectionContext
+
 
 class SelectionManager(object):
 
@@ -65,19 +67,19 @@ class SelectionManager(object):
                 self.intersection = (node, distance)
 
     def on_select(self, cursor):
-        context = next((context for context in filter(lambda context: context, map(lambda node: node.match(self.intersection[0]), self.nodes))), [])
-        if context:
-            if cursor.id in self.selections and self.selections[cursor.id] != context:
+        context = SelectionContext(cursor, next((context for context in filter(lambda context: context, map(lambda node: node.match(self.intersection[0]), self.nodes))), []))
+        if context.selection:
+            if cursor.id in self.selections and self.selections[cursor.id] != context.selection:
                 self.on_release(cursor)
 
-            self.selections[cursor.id] = list(context)
+            self.selections[cursor.id] = list(context.selection)
 
             node = context.pop()
             node.on_select(context)
 
     def on_release(self, cursor):
         if cursor.id in self.selections and self.selections[cursor.id]:
-            context = list(self.selections[cursor.id])
+            context = SelectionContext(cursor, list(self.selections[cursor.id]))
 
             node = context.pop()
             node.on_release(context)
