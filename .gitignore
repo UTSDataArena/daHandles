@@ -1,4 +1,7 @@
 *.pyc
 *.log
 *.eqc
+
 build
+
+.idea/workspace.xml

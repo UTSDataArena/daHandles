@@ -22,18 +22,22 @@ class ControllableSceneNode(SelectableSceneNode):
             self.show_controls()
             super(ControllableSceneNode, self).on_select(context)
 
-        if context:
+        if context.selection and context.selector == self.selector:
             control = context.pop()
             control.on_select(context)
 
     def on_release(self, context):
-        if self.is_selected:
-            if context:
+        if self.is_selected and context.selector == self.selector:
+            if context.selection:
                 control = context.pop()
                 control.on_release(context)
 
             self.hide_controls()
             super(ControllableSceneNode, self).on_release(context)
+
+    def on_event(self, event):
+        for control in self.controls:
+            control.on_event(event)
 
     def add_control(self, control):
         self.controls.append(control)

@@ -2,30 +2,25 @@ from euclid import *
 from omega import *
 
 from daHandles.control.TriAxisControlGroup import TriAxisControlGroup
+from daHandles.control.utility.Axis import Axis
+from daHandles.control.utility.Direction import Direction
 
 
 class Translation(object):
 
-    POSITIVE = 1
-    NEGATIVE = -1
-
     INCREMENT = 0.1
 
     @staticmethod
-    def translate(axis, origin, delta):
+    def translate(axis, origin, movement):
 
         translation = Vector3(0, 0, 0)
+        direction = Direction.get_direction(axis, origin, movement)
 
-        if axis == TriAxisControlGroup.X_AXIS:
-            direction = Translation.NEGATIVE if delta.x <= origin.x else Translation.POSITIVE
+        if axis == Axis.X_AXIS:
             translation.x += Translation.INCREMENT * direction
-
-        elif axis == TriAxisControlGroup.Y_AXIS:
-            direction = Translation.POSITIVE if delta.y <= origin.y else Translation.NEGATIVE
+        elif axis == Axis.Y_AXIS:
             translation.y += Translation.INCREMENT * direction
-
-        elif axis == TriAxisControlGroup.Z_AXIS:
-            direction = Translation.POSITIVE if delta.x <= origin.x else Translation.NEGATIVE
+        elif axis == Axis.Z_AXIS:
             translation.z += Translation.INCREMENT * direction
 
         return translation
